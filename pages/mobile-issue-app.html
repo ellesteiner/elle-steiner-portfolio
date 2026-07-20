@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Property Reporting App — Elle Steiner // UX Design Leader</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <main id="page">
+
+    <section class="case-header">
+      <div class="case-header__inner wrap">
+        <a class="breadcrumb" href="/">&larr; Back to Work</a>
+        <h1 class="case-title">Mobile Property Reporting App</h1>
+        <p class="case-subtitle">Exploring AI-Assisted Rapid Prototyping</p>
+      </div>
+    </section>
+
+    <div class="case-hero scrim-banner">
+      <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/f9b2625c-80cf-4bd7-aab1-a261219e3383/renter.png?format=1500w" alt="">
+    </div>
+
+    <section class="section">
+      <div class="section__inner wrap">
+        <div class="prose">
+          <h2>The Experiment</h2>
+          <p>Can AI tools accelerate the UX design process from concept to testable prototype while maintaining design quality? I explored this question by designing a mobile issue reporting flow using Claude for requirements and Visily for mockups.</p>
+          <p><strong>Project Context:</strong> Design exploration &nbsp;|&nbsp; <strong>Duration:</strong> 2 weeks &nbsp;|&nbsp; <strong>Role:</strong> Solo designer using AI tools</p>
+
+          <h2>The Challenge</h2>
+          <p>Short-term rental guests often encounter property issues (broken appliances, maintenance needs) but face friction when trying to report them. Existing systems require account creation, complex navigation, and lengthy forms—leading many guests to abandon reports or contact support directly.</p>
+          <p><strong>Design Opportunity:</strong> Create a frictionless reporting experience that works without login, optimized for mobile, and captures complete information for property managers.</p>
+          <p><strong>Personal Learning Goal:</strong> Test how AI tools can compress traditional design timelines while exploring best practices for AI-augmented workflows.</p>
+
+          <h2>The AI-Assisted Approach</h2>
+          <h3>Why AI Tools?</h3>
+          <p>I wanted to explore whether AI could accelerate the early-stage design process (requirements definition, mockups, prototype) without sacrificing quality or strategic thinking.</p>
+          <p><strong>Tools Selected:</strong></p>
+          <ul>
+            <li>Claude AI: PRD development and user story generation</li>
+            <li>Visily AI: Rapid mockup creation from text prompts</li>
+            <li>Figma: Final refinement and prototyping</li>
+          </ul>
+          <p><strong>Hypothesis:</strong> AI tools could reduce time-to-prototype from 4-6 weeks to 1-2 weeks for exploratory projects.</p>
+
+          <h3>AI Workflow Experiment</h3>
+          <p><strong>Traditional Process (Estimated 4-6 weeks):</strong></p>
+          <ul>
+            <li>Week 1-2: Requirements gathering, PRD writing</li>
+            <li>Week 2-3: User flows and wireframes</li>
+            <li>Week 3-4: High-fidelity mockups</li>
+            <li>Week 5-6: Prototype and refinement</li>
+          </ul>
+          <p><strong>AI-Assisted Process (Actual: 2 weeks):</strong></p>
+          <ul>
+            <li>Day 1-2: AI-generated PRD with human refinement</li>
+            <li>Day 3-5: User flows created collaboratively</li>
+            <li>Day 6-10: AI-generated mockups with manual refinement</li>
+            <li>Day 11-14: Prototype assembly and polish</li>
+          </ul>
+          <p><strong>Result:</strong> 70% time reduction while maintaining design quality (though not validated with users).</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/9c2ee792-350d-47a8-a1d8-1d713268fbb3/AI-workflow.png?format=1500w" alt="AI-assisted workflow timeline">
+          </figure>
+
+          <h2>Phase 1: AI-Generated PRD</h2>
+          <h3>Using Claude AI for Requirements</h3>
+          <p>I created a detailed prompt for Claude AI describing the problem space, user needs, and technical constraints. The AI generated a comprehensive PRD including user stories, success metrics, and technical specifications.</p>
+
+          <p><strong>What AI Generated Well:</strong></p>
+          <ul>
+            <li>Standard PRD structure and sections</li>
+            <li>Comprehensive user story list</li>
+            <li>Technical requirements and constraints</li>
+            <li>Initial success metrics</li>
+          </ul>
+          <p><strong>What Required Human Refinement:</strong></p>
+          <ul>
+            <li>Success metrics were generic ("increase satisfaction")</li>
+            <li>User stories lacked nuance from actual user research</li>
+            <li>Missing edge cases and accessibility considerations</li>
+            <li>No rollout or testing strategy</li>
+          </ul>
+          <p class="pull-quote">Key Learning: AI accelerates documentation but human domain expertise adds critical depth. I spent ~40% of the time I would have spent writing from scratch, but added 50% more value through refinement.</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/bd0957b1-e3ee-4816-83b7-04afb7b191ad/Human-vs-AI.png?format=1500w" alt="Human vs AI contribution breakdown">
+          </figure>
+
+          <h3>Refined PRD Components</h3>
+          <p><strong>The Goal:</strong> Create a mobile-first, login-free property issue reporting system that:</p>
+          <ul>
+            <li>Reduces reporting time from 15+ minutes to under 3 minutes</li>
+            <li>Captures complete, actionable information for property managers</li>
+            <li>Works across all mobile devices and accessibility tools</li>
+          </ul>
+
+          <p><strong>Success Criteria (Human-Defined):</strong></p>
+          <ul>
+            <li>85%+ completion rate (guests who start finish)</li>
+            <li>Under 3 minutes average completion time</li>
+            <li>&lt;15% reports requiring follow-up clarification</li>
+            <li>Accessible across devices and assistive technologies</li>
+          </ul>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/49db61b8-4df8-47c2-aae7-50256791320b/Success-Criteria.png?format=1500w" alt="Success criteria">
+          </figure>
+
+          <p><strong>User Stories (AI-Generated, Human-Refined):</strong></p>
+          <p><strong>Guest Needs:</strong></p>
+          <ul>
+            <li>Report issues without account creation (friction removal)</li>
+            <li>Use mobile phone (primary access method)</li>
+            <li>Include photos (visual documentation)</li>
+            <li>Receive confirmation (reduce anxiety)</li>
+          </ul>
+          <p><strong>Property Manager Needs:</strong></p>
+          <ul>
+            <li>Structured data (efficient routing)</li>
+            <li>Complete information (reduce back-and-forth)</li>
+            <li>Guest contact info (follow-up capability)</li>
+            <li>Timestamps and patterns (operational insights)</li>
+          </ul>
+          <p><strong>Design Principles (Human-Established):</strong></p>
+          <ul>
+            <li>Minimal friction: Every field must justify its presence</li>
+            <li>Mobile-first: Touch-optimized, generous spacing</li>
+            <li>Trust-building: Professional, reassuring design</li>
+            <li>Accessible: WCAG AA compliance minimum</li>
+          </ul>
+
+          <h2>Phase 2: User Flow Design</h2>
+          <h3>Collaborative Flow Development</h3>
+          <p>While AI generated initial flow suggestions, the actual flow design came from traditional UX thinking combined with analyzing similar successful forms.</p>
+
+          <h4>Flow 1: Accessing the Form</h4>
+          <p><strong>Design Decision:</strong> Multi-channel access</p>
+          <ul>
+            <li>Primary: QR codes in property (easiest mobile access)</li>
+            <li>Secondary: SMS link sent to guest</li>
+            <li>Tertiary: Email link in reservation confirmation</li>
+          </ul>
+          <p><strong>Rationale:</strong> QR codes eliminate typing on mobile, but backup channels ensure accessibility.</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c0ca8b54-aea6-4b2c-b444-13d013a81c71/flow1.png?format=1500w" alt="Flow 1: accessing the form">
+          </figure>
+
+          <h4>Flow 2: Completing the Report</h4>
+          <p><strong>Design Decision:</strong> Single-page scroll with progress indicator</p>
+          <p><strong>Options Considered:</strong></p>
+          <ul>
+            <li>Multi-step wizard (separate screens per section)</li>
+            <li>Single-page form (all fields visible)</li>
+            <li>Accordion sections (expandable segments)</li>
+          </ul>
+          <p><strong>Choice:</strong> Single-page with smooth scroll</p>
+          <p><strong>Rationale:</strong> Research on mobile form completion shows single-page forms have higher completion rates when total fields &lt;15, which our form met.</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/8ca8bca9-ae3a-4b1c-b3bc-294f295e8e36/flow2.png?format=1500w" alt="Flow 2: completing the report">
+          </figure>
+
+          <p><strong>Key Flow Decisions:</strong></p>
+          <p><strong>1. No Authentication Required.</strong> Pro: Eliminates major friction point. Con: Limits ability to track repeat reporters. Decision: Friction removal more valuable than tracking.</p>
+          <p><strong>2. Property Code Identification.</strong> Pro: Precise property matching without address entry. Con: Guests must locate code. Decision: Include visual guide and "I don't have my code" backup.</p>
+          <p><strong>3. Photo Upload Strategy.</strong> Pro: Visual documentation reduces clarification requests. Con: Upload time on poor connections. Decision: Maximum 5 photos, optional (not required).</p>
+
+          <h2>Phase 3: AI-Generated Mockups</h2>
+          <h3>Using Visily AI for Rapid Mockups</h3>
+          <p>I provided Visily with:</p>
+          <ul>
+            <li>PRD text describing each screen</li>
+            <li>User flow diagrams</li>
+            <li>Design principle requirements</li>
+            <li>Reference examples of similar forms</li>
+          </ul>
+          <p><strong>What Visily Generated:</strong> Initial mockups for 5 key screens in ~2 hours (vs. 2 days manually).</p>
+
+          <p><strong>Quality Assessment:</strong></p>
+          <ul>
+            <li>Clean, modern aesthetic</li>
+            <li>Logical component placement</li>
+            <li>Reasonable spacing and hierarchy</li>
+            <li>Generic visual style (not distinctive)</li>
+            <li>Inconsistent spacing systems</li>
+            <li>Some accessibility issues (contrast, target sizes)</li>
+          </ul>
+
+          <p><strong>Human Refinement Required (~6 hours):</strong></p>
+          <ul>
+            <li>Adjusted all touch targets to minimum 44x44px</li>
+            <li>Fixed color contrast ratios for WCAG AA compliance</li>
+            <li>Aligned spacing to consistent 8px grid</li>
+            <li>Refined typography hierarchy</li>
+            <li>Added micro-interactions and state changes</li>
+            <li>Created responsive breakpoints</li>
+          </ul>
+          <p class="pull-quote">Key Learning: AI generates 70% of mockup value in 20% of time, but final 30% (polish, accessibility, interaction design) requires human craft.</p>
+
+          <h3>Key Design Features</h3>
+          <p><strong>1. Welcome Screen</strong></p>
+          <ul>
+            <li>Clear value proposition: "Report a Property Issue"</li>
+            <li>Time estimate: "Takes about 2 minutes"</li>
+            <li>Visual reassurance: Clean, professional design</li>
+          </ul>
+          <p><strong>Design Rationale:</strong> Research shows time estimates reduce form abandonment by setting clear expectations.</p>
+
+          <p><strong>2. Progress Indicator</strong></p>
+          <ul>
+            <li>4-section progress bar</li>
+            <li>Section labels: Contact → Location → Issue → Review</li>
+          </ul>
+          <p><strong>Design Rationale:</strong> Progress visibility reduces abandonment; 4 sections balances feedback without overwhelming.</p>
+
+          <p><strong>3. Form Field Strategy</strong></p>
+          <p><strong>Contact Section:</strong></p>
+          <ul>
+            <li>Name (required)</li>
+            <li>Email (required)</li>
+            <li>Phone (optional with explanation)</li>
+          </ul>
+          <p><strong>Design Decision:</strong> Make phone optional despite property manager requests<br><strong>Rationale:</strong> Required phone fields reduce completion by ~18%. Optional with benefit explanation ("for faster resolution") gets 70%+ opt-in while maintaining completion rate.</p>
+          <p><strong>Location Section:</strong></p>
+          <ul>
+            <li>Property code with visual guide</li>
+            <li>Fallback: "I don't have my code" link</li>
+          </ul>
+          <p><strong>Design Decision:</strong> Prioritize code over address entry<br><strong>Rationale:</strong> Reduces misrouted reports and typing on mobile.</p>
+          <p><strong>Issue Section:</strong></p>
+          <ul>
+            <li>Category dropdown (structured data)</li>
+            <li>Free text description (nuance)</li>
+            <li>Photo upload (optional, max 5)</li>
+          </ul>
+          <p><strong>Design Decision:</strong> Hybrid structured + free-text<br><strong>Rationale:</strong> Category enables routing efficiency; description captures context.</p>
+
+          <p><strong>4. Confirmation Screen</strong></p>
+          <p>This screen emerged during mockup phase (not in original flows).</p>
+          <p><strong>Design Addition:</strong></p>
+          <ul>
+            <li>Confirmation message with timestamp</li>
+            <li>Unique reference number</li>
+            <li>Expected response timeline</li>
+            <li>Support contact information</li>
+            <li>Option to submit another issue</li>
+          </ul>
+          <p><strong>Why Added:</strong> Analyzing similar flows revealed that anxiety about "was it received?" leads to follow-up contact. Comprehensive confirmation reduces this.</p>
+          <p><em>Design Evolution Example: This demonstrates how design insights emerge during execution, not just planning. AI tools don't surface these insights—human UX thinking does.</em></p>
+
+          <p><a href="https://early-lovely-99603622.figma.site/" target="_blank" rel="noopener">View Prototype</a></p>
+
+          <h2>What Worked Well</h2>
+          <p><strong>1. Requirements Acceleration.</strong> AI-generated PRD provided excellent structural foundation. Human refinement added domain expertise and edge case handling.<br>Time Saved: ~60% (3 days → 1 day) &nbsp;|&nbsp; Quality Trade-off: Minimal, after human refinement</p>
+          <p><strong>2. Rapid Visual Exploration.</strong> Visily generated initial mockups in hours, enabling quick iteration on visual direction.<br>Time Saved: ~50% (4 days → 2 days) &nbsp;|&nbsp; Quality Trade-off: Required significant manual refinement for polish and accessibility</p>
+          <p><strong>3. Pattern Recognition.</strong> AI tools excel at identifying common UX patterns from similar products, accelerating research phase.</p>
+
+          <h2>What Required Human Expertise</h2>
+          <p><strong>1. Strategic Design Decisions</strong></p>
+          <ul>
+            <li>Which fields are truly necessary?</li>
+            <li>How to balance structured vs. free-text input?</li>
+            <li>Where to prioritize friction removal vs. data completeness?</li>
+          </ul>
+          <p><em>AI Limitation:</em> Cannot make strategic tradeoffs without business context and user understanding.</p>
+          <p><strong>2. Accessibility &amp; Interaction Design</strong></p>
+          <ul>
+            <li>Touch target sizing</li>
+            <li>Color contrast ratios</li>
+            <li>Micro-interactions and state changes</li>
+            <li>Error recovery patterns</li>
+          </ul>
+          <p><em>AI Limitation:</em> Generated designs often violated accessibility standards and lacked interaction nuance.</p>
+          <p><strong>3. Insight Discovery</strong></p>
+          <ul>
+            <li>Confirmation screen addressing submission anxiety</li>
+            <li>Optional phone with benefit explanation</li>
+            <li>Property code visual guide</li>
+          </ul>
+          <p><em>AI Limitation:</em> These insights emerged from understanding user psychology, not from AI suggestions.</p>
+
+          <h2>AI-Assisted Design Best Practices</h2>
+          <p><strong>Do:</strong></p>
+          <ul>
+            <li>Use AI for structure and acceleration</li>
+            <li>Provide detailed, context-rich prompts</li>
+            <li>Plan for 40-50% human refinement time</li>
+            <li>Validate AI outputs against standards (WCAG, usability principles)</li>
+            <li>Treat AI as collaborative tool, not replacement</li>
+          </ul>
+          <p><strong>Don't:</strong></p>
+          <ul>
+            <li>Accept AI outputs without critical review</li>
+            <li>Skip accessibility audits</li>
+            <li>Assume AI understands your specific user context</li>
+            <li>Use AI as excuse for skipping user research</li>
+            <li>Present AI-generated work as fully polished</li>
+          </ul>
+        </div>
+
+        <h2 class="section__heading">App Screens</h2>
+        <div class="case-gallery case-gallery--three">
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/b60a72a8-d6c6-4b64-83dd-bfff417f8b64/1-welcome.png?format=1000w" alt="">
+            <figcaption>Welcome screen</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/93035d44-11c7-4951-bc59-d16a5102e7cd/2-Report-issue.png?format=1000w" alt="">
+            <figcaption>Report an issue</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/4a873891-7449-4f4d-8ab2-d20e812f4568/3-issue-details.png?format=1000w" alt="">
+            <figcaption>Issue details</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c6911c77-45ae-49e6-8078-37014164af7c/4-confirm.png?format=1000w" alt="">
+            <figcaption>Confirmation screen</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/4b50f780-f3cb-4525-b9b8-1275904b49f0/5-feedback.png?format=1000w" alt="">
+            <figcaption>User feedback</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>

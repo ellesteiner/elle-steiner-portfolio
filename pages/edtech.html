@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdTech: Student Polling App — Elle Steiner // UX Design Leader</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <main id="page">
+
+    <section class="case-header">
+      <div class="case-header__inner wrap">
+        <a class="breadcrumb" href="/">&larr; Back to Work</a>
+        <h1 class="case-title">EdTech: Student Polling App</h1>
+        <p class="case-subtitle">Real-Time Classroom Engagement Redesign</p>
+      </div>
+    </section>
+
+    <div class="case-hero scrim-banner">
+      <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/71ae8521-fd3e-4403-951e-ce627aeec6cf/polarbear-hero.png?format=1500w" alt="">
+    </div>
+
+    <section class="section">
+      <div class="section__inner wrap">
+        <p class="case-meta">Role: Lead Product Designer &nbsp;//&nbsp; Timeline: 9 months &nbsp;//&nbsp; Team: 1 PM, 5 engineers</p>
+
+        <h2 class="section__heading">Impact at a Glance</h2>
+        <div class="stat-grid">
+          <div class="stat-card"><p>2× faster task completion (45s → 22s average)</p></div>
+          <div class="stat-card"><p>100% success rate on core flows (up from 62%)</p></div>
+          <div class="stat-card"><p>85% reduction in reported instructor anxiety</p></div>
+        </div>
+
+        <div class="prose">
+          <h2>The Challenge</h2>
+          <p>The original classroom polling tool created cognitive overload for instructors. Question creation required navigating an 8-step "module" builder, and a bloated creation modal displayed every possible question type simultaneously, most of which were rarely used. During live sessions, instructors reported high anxiety due to unclear system status and confusing controls. Usability testing revealed only 62% of core tasks were completed successfully, with an average completion time of 45 seconds for basic question creation.</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/4c6894d1-37a1-45c3-929e-0c88b26a55a9/orig-LC.png?format=1500w" alt="Original screens of the polling tool">
+            <figcaption>Original screens</figcaption>
+          </figure>
+
+          <h2>My Approach</h2>
+          <h3>Research &amp; Problem Discovery</h3>
+          <p>I conducted a comprehensive audit of the existing application, analyzing usage data and interviewing 3 instructors to understand pain points. Three critical problems emerged:</p>
+
+          <p><strong>Problem 1: Cognitive Overload in Question Creation.</strong> The modal presented 15+ question type options upfront, but data showed 80% of instructors only used 3 types (multiple choice, short answer, true/false). This created decision paralysis and slowed creation time.</p>
+          <p><strong>Problem 2: Unclear System Status During Live Sessions.</strong> Instructors couldn't easily tell if questions were successfully delivered, if students were responding, or if the session was active. This ambiguity caused anxiety, especially during high-stakes classroom moments.</p>
+          <p><strong>Problem 3: Excessive Steps to Launch.</strong> Getting from "I want to ask a question" to "students can now respond" required 8 clicks through multiple screens. For spontaneous classroom questions, this friction killed momentum.</p>
+
+          <p class="pull-quote">Key Insight: Instructors needed two distinct modes: preparation mode (building question banks at their desk) and live mode (rapid-fire delivery in the classroom). The original design tried to serve both with one complex interface.</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/0e36b851-3f7a-4ff2-ba1b-d894d3cbff80/whiteboard.jpg?format=1500w" alt="Whiteboarding session with the project manager">
+            <figcaption>Whiteboarding session w/ Project Manager</figcaption>
+          </figure>
+
+          <div class="case-gallery">
+            <figure>
+              <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c948391e-609d-46a7-bda6-2ea55659e2e5/UserFlows.png?format=1500w" alt="User flows diagram">
+            </figure>
+            <figure>
+              <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/9364bc23-a4e2-4698-ab8b-2a3392551bfc/Instructor-flow.png?format=1500w" alt="Instructor flow diagram">
+            </figure>
+          </div>
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/db541c75-a5ff-4754-94df-6a426c89d1d9/student-flows.png?format=1500w" alt="Student flow diagram">
+            <figcaption>Communicating re: User Flows</figcaption>
+          </figure>
+
+          <h3>Design Strategy</h3>
+          <p>Based on research findings, I established three design principles:</p>
+          <ul>
+            <li><strong>Default to the Common Case</strong> — Surface the 3 most-used question types prominently, hide advanced options</li>
+            <li><strong>Clear System Status</strong> — Always show what's happening: preparing, live, responding, complete</li>
+            <li><strong>Minimize Clicks to Launch</strong> — Reduce the path from question creation to student delivery</li>
+          </ul>
+
+          <h3>Key Design Decisions</h3>
+
+          <h4>Decision 1: Streamlined Question Creation Flow</h4>
+          <p><strong>Problem:</strong> 8-step module builder with every option visible</p>
+          <p><strong>Solution:</strong> 3-step focused flow with progressive disclosure</p>
+          <ol>
+            <li>Choose question type (only showing top 3 types, "More" link for others)</li>
+            <li>Write question and answers</li>
+            <li>Review and launch</li>
+          </ol>
+          <p><strong>Rationale:</strong> Task analysis showed instructors rarely changed default settings. By hiding advanced options behind progressive disclosure, I reduced cognitive load while maintaining flexibility.</p>
+          <p><strong>Impact:</strong> Question creation time dropped from 45s to 22s average (51% faster)</p>
+
+          <h4>Decision 2: Live Session Status Indicator</h4>
+          <p><strong>Problem:</strong> No clear signal of session state or student activity</p>
+          <p><strong>Solution:</strong> Persistent status banner showing:</p>
+          <ul>
+            <li>Active session indicator (green pulse animation)</li>
+            <li>Live response count updating in real-time</li>
+            <li>Clear "End Session" action</li>
+          </ul>
+          <p><strong>Rationale:</strong> Instructors reported anxiety stemmed from uncertainty. A persistent, glanceable status indicator provided the confidence they needed to focus on teaching rather than troubleshooting.</p>
+          <p><strong>Impact:</strong> 85% reduction in reported anxiety during live sessions (post-deployment survey)</p>
+
+          <h4>Decision 3: Dropdown to Prominent Button</h4>
+          <p><strong>Problem:</strong> 70% of users failed to find question type selector in dropdown</p>
+          <p><strong>Solution:</strong> Replaced hidden dropdown with prominent card-based selection on main screen</p>
+          <p><strong>Rationale:</strong> Card-based selection improved discoverability and allowed for visual differentiation between question types (icons + descriptions).</p>
+          <p><strong>Impact:</strong> Discoverability increased to 100% in subsequent testing</p>
+
+          <h3>Validation &amp; Iteration</h3>
+          <p>I created interactive prototypes and conducted three rounds of usability testing with 18 instructors:</p>
+
+          <h4>Round 1 - Initial Prototype:</h4>
+          <ul>
+            <li>62% task success rate</li>
+            <li>Users struggled to find question type selector (dropdown)</li>
+            <li>Confusion about whether questions were "live" or "saved"</li>
+          </ul>
+          <p><strong>Changes Made:</strong></p>
+          <ul>
+            <li>Replaced dropdown with card-based selection</li>
+            <li>Added clear live/draft status labels</li>
+            <li>Simplified navigation from 3 tabs to 2 primary views</li>
+          </ul>
+
+          <h4>Round 2 - Revised Prototype:</h4>
+          <ul>
+            <li>88% task success rate</li>
+            <li>Users still uncertain about live session status</li>
+            <li>Requests for more visible response tracking</li>
+          </ul>
+          <p><strong>Changes Made:</strong></p>
+          <ul>
+            <li>Added persistent status banner</li>
+            <li>Implemented real-time response counter</li>
+            <li>Designed clear session start/end flows</li>
+          </ul>
+
+          <h4>Round 3 - Final Validation:</h4>
+          <ul>
+            <li>100% task success rate across all core flows</li>
+            <li>Average task completion time: 22s (down from 45s baseline)</li>
+            <li>95% of users rated the experience "easy" or "very easy"</li>
+          </ul>
+
+          <h2>Design Solution</h2>
+          <h3>Instructor Experience</h3>
+          <p><strong>Dashboard Redesign.</strong> Simplified the main view into two clear sections:</p>
+          <ul>
+            <li><strong>Question Bank:</strong> Browse and prepare questions for future use</li>
+            <li><strong>Live Session:</strong> Active polling with real-time response tracking</li>
+          </ul>
+          <p><strong>Question Creation Modal.</strong> Reduced from cluttered multi-step process to focused 3-step flow:</p>
+          <ol>
+            <li>Choose type (card-based selection of 3 common types + "More" option)</li>
+            <li>Compose question (streamlined form with only essential fields)</li>
+            <li>Preview and launch (clear review screen with one-click launch)</li>
+          </ol>
+          <p><strong>Live Session Interface.</strong> Designed a focused view optimized for in-the-moment use:</p>
+          <ul>
+            <li>Large, clear status indicator (active/paused/ended)</li>
+            <li>Real-time response count with progress visualization</li>
+            <li>Simple one-click controls (next question, end session)</li>
+            <li>Results preview without leaving the flow</li>
+          </ul>
+
+          <h3>Student Experience</h3>
+          <p><strong>Simplified Response Flow.</strong> Reduced steps from 5 to 3:</p>
+          <ol>
+            <li>Join session (one-time code entry)</li>
+            <li>Answer question (clear, touch-friendly interface)</li>
+            <li>Confirm submission (immediate feedback)</li>
+          </ol>
+          <p><strong>Clear Visual Feedback</strong></p>
+          <ul>
+            <li>Submitted answers show confirmation state</li>
+            <li>Waiting state displays clear messaging</li>
+            <li>Session end shows thank you message</li>
+          </ul>
+
+          <h2>Outcomes &amp; Impact</h2>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/e1b138e2-b0e1-4548-b8b5-f90a03c9579d/Measureable-Results.png?format=1500w" alt="Measurable results summary">
+          </figure>
+
+          <h3>Measurable Results</h3>
+          <p><strong>Efficiency:</strong></p>
+          <ul>
+            <li>51% faster task completion (45s → 22s average)</li>
+            <li>8 steps reduced to 3 for question launch</li>
+            <li>100% success rate on core flows (up from 62%)</li>
+          </ul>
+          <p><strong>User Satisfaction:</strong></p>
+          <ul>
+            <li>85% reduction in reported instructor anxiety</li>
+            <li>95% rated experience "easy" or "very easy"</li>
+            <li>Net Promoter Score increased from 42 to 78</li>
+          </ul>
+          <p><strong>Scale:</strong></p>
+          <ul>
+            <li>Deployed to 15,000+ instructors</li>
+            <li>Used across 200+ universities</li>
+            <li>2M+ student responses in first 6 months</li>
+          </ul>
+
+          <h3>What Made This Successful</h3>
+          <ul>
+            <li><strong>User-Centered Research:</strong> Deep understanding of instructor anxiety and classroom context drove design decisions rather than feature requests.</li>
+            <li><strong>Iterative Validation:</strong> Three rounds of testing with 18 users ensured solutions actually worked before development investment.</li>
+            <li><strong>Focus on Constraints:</strong> Designing for the most common case (3 question types, basic flow) while accommodating edge cases through progressive disclosure.</li>
+            <li><strong>Measurable Impact:</strong> Clear before/after metrics demonstrated value to stakeholders and informed future product decisions.</li>
+          </ul>
+        </div>
+
+        <div class="case-gallery case-gallery--three">
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/b682a959-a76a-46cd-839e-ddeac97e1ef9/01_full_bank_new.png?format=1000w" alt="">
+            <figcaption>Instructor Dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/99a2ee06-8228-476a-a73b-7a634bdd0993/02_modal_new.png?format=1000w" alt="">
+            <figcaption>Create a question</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/1bfdd199-b74b-4fd6-8871-07ee1ec1d637/04_poll.png?format=1000w" alt="">
+            <figcaption>Create a student poll</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/9c6b9934-2bcb-4925-90bf-6df3026143bb/05_results_modal.png?format=1000w" alt="">
+            <figcaption>Session over</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/fa5ee9d2-4b2d-4780-ae2e-3d77cd831aad/08_mobile_dash.png?format=1000w" alt="">
+            <figcaption>Join a session</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/6c6bdebc-ebba-4940-8b4d-31a259dac90b/09_mobile1.png?format=1000w" alt="">
+            <figcaption>Question #1</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/ac3f4cb7-04a7-4b0f-9efd-4c58dba72b6e/11_mobile3.png?format=1000w" alt="">
+            <figcaption>Submit an answer</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c562c6b0-53e9-4917-98fc-8533526ff6da/13_mobile5b.png?format=1000w" alt="">
+            <figcaption>Session over</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>

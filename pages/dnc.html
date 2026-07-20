@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Data Dashboard — Elle Steiner // UX Design Leader</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <main id="page">
+
+    <section class="case-header">
+      <div class="case-header__inner wrap">
+        <a class="breadcrumb" href="/">&larr; Back to Work</a>
+        <h1 class="case-title">Campaign Data Dashboard</h1>
+        <p class="case-subtitle">Exploring AI-Assisted Complex Data Visualization</p>
+      </div>
+    </section>
+
+    <div class="case-hero scrim-banner">
+      <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/86c33999-540c-4016-a5e3-3fecf16f51b9/DNC-hero.png?format=1500w" alt="">
+    </div>
+
+    <section class="section">
+      <div class="section__inner wrap">
+        <div class="prose">
+          <h2>The Challenge</h2>
+          <p>Can AI tools accelerate dashboard design for complex, multi-stakeholder products? I tested this by creating a campaign analytics concept using AI for research simulation and information architecture, then applying UX expertise to refine outputs into a credible design.</p>
+          <p><strong>Project Type:</strong> Design experiment &nbsp;|&nbsp; <strong>Duration:</strong> 3 weeks &nbsp;|&nbsp; <strong>Focus:</strong> AI-assisted workflow</p>
+
+          <h2>The Challenge</h2>
+          <p>Design a campaign analytics dashboard displaying voter data, volunteer metrics, ballot tracking, and performance insights for diverse users (field organizers, data directors, volunteer coordinators, state staff).</p>
+          <p><strong>Traditional approach:</strong> 8-12 weeks of stakeholder interviews, card sorting, iterative prototyping<br>
+          <strong>My experiment:</strong> Compress to 2 weeks using AI, then validate approach against real tools</p>
+
+          <h2>AI-Assisted Process</h2>
+          <h3>What I Used AI For</h3>
+
+          <h4>1. Persona Generation</h4>
+          <p>Prompted Claude to create 4 realistic user personas based on campaign operations. Generated daily decisions, key needs, and pain points.</p>
+          <p><strong>Result:</strong> Plausible starting framework in 90 minutes vs. 8 hours manually</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/bd600c68-c9ea-4990-ab90-6f728e2cb3f8/DNC-personas.png?format=1500w" alt="Four campaign operations personas">
+          </figure>
+
+          <h4>2. Information Architecture</h4>
+          <p>Simulated card sorting to identify logical data groupings. Generated 6 primary categories: Today's Priorities, Voter Universe, Team Performance, Ballot Tracking, Trends, Reports.</p>
+          <p><strong>Result:</strong> Reasonable IA foundation aligned with existing tool patterns</p>
+
+          <h4>3. Visualization Selection</h4>
+          <p>Asked AI to recommend chart types for different data scenarios. Got appropriate suggestions: tables + maps for targeting, progress bars for ballot returns, heat maps for volunteer coverage.</p>
+          <p><strong>Result:</strong> Good starting point requiring human refinement for accessibility</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Data Type</th>
+                  <th>Visualization</th>
+                  <th>Rationale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Voter targeting priorities</td>
+                  <td>Sortable table + map</td>
+                  <td>Users need to export lists AND see geographic distribution</td>
+                </tr>
+                <tr>
+                  <td>Ballot return rates</td>
+                  <td>Progress bars + trend lines</td>
+                  <td>Shows both status &amp; momentum</td>
+                </tr>
+                <tr>
+                  <td>Volunteer activity</td>
+                  <td>Heat map by time/location</td>
+                  <td>Reveals coverage gaps &amp; peak times</td>
+                </tr>
+                <tr>
+                  <td>Turnout modeling</td>
+                  <td>Gauge + confidence interval</td>
+                  <td>Shows prediction with uncertainty</td>
+                </tr>
+                <tr>
+                  <td>Contact attempts</td>
+                  <td>Stacked bar by result</td>
+                  <td>Shows volume &amp; quality simultaneously</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/f1508776-c492-47ac-a287-9cc3a4ab81d3/AI-flow-test.png?format=1500w" alt="AI-simulated flow testing">
+          </figure>
+
+          <h2>Key Design Decisions</h2>
+          <h3>Decision 1: Progressive Disclosure Strategy</h3>
+          <p><strong>Problem:</strong> Complex dashboards overwhelm users with data OR hide essential information.</p>
+          <p><strong>Solution:</strong> Three-tier hierarchy</p>
+          <ul>
+            <li>Tier 1: Critical metrics (always visible)</li>
+            <li>Tier 2: Context (one click away)</li>
+            <li>Tier 3: Deep analysis (expandable)</li>
+          </ul>
+          <p><strong>Example:</strong> "47% ballot return" → "↑3% vs. yesterday, ↓2% vs. target" → Full trend chart with demographics</p>
+
+          <h3>Decision 2: Role-Based Smart Defaults</h3>
+          <p><strong>Problem:</strong> Different users need different entry points.</p>
+          <p><strong>Solution:</strong> Personalized landing views</p>
+          <ul>
+            <li>Field Organizer → Today's contact priorities</li>
+            <li>Data Director → Trends &amp; analysis</li>
+            <li>Volunteer Coordinator → Team performance</li>
+            <li>State Staff → Multi-campaign overview</li>
+          </ul>
+          <p><strong>Rationale:</strong> Reduces setup friction while preserving customization.</p>
+
+          <h3>Decision 3: Algorithm Transparency</h3>
+          <p><strong>Problem:</strong> Users distrust "black box" priority scores.</p>
+          <p><strong>Solution:</strong> Methodology tooltips</p>
+          <ul>
+            <li>"Priority score: turnout likelihood (40%), persuadability (30%), contact history (30%)"</li>
+            <li>Link to full documentation</li>
+            <li>Manual weighting adjustment option</li>
+          </ul>
+          <p><strong>Rationale:</strong> Transparency builds trust for high-stakes decisions.</p>
+
+          <h2>What AI Did Well VS What Needed Human Expertise</h2>
+          <h3>AI Strengths</h3>
+          <ul>
+            <li>Rapid persona generation - 4 detailed personas in minutes</li>
+            <li>Pain point brainstorming - 15+ relevant challenges quickly</li>
+            <li>Visualization recommendations - Appropriate chart types for data</li>
+            <li>Pattern recognition - Identified common dashboard structures</li>
+          </ul>
+          <h3>Human Expertise Required</h3>
+          <ul>
+            <li>Strategic prioritization - Which users/features to focus on first</li>
+            <li>Interaction design - Transitions, loading states, error handling</li>
+            <li>Accessibility - Color contrast, screen readers, keyboard nav</li>
+            <li>Visual polish - Typography, spacing, component consistency</li>
+          </ul>
+
+          <h2>Mobile-First Design Approach</h2>
+          <p>60% of field staff check data on mobile while canvassing</p>
+          <p><strong>Challenge:</strong> How do we display complex voter data, prioritization logic, and actionable insights on a 375px screen while users are actively canvassing?</p>
+
+          <h2>Outcomes</h2>
+          <p><strong>Deliverables:</strong></p>
+          <ul>
+            <li>Dashboard concept with 20+ components</li>
+            <li>Information architecture for 6 data categories</li>
+            <li>Mobile-responsive layouts</li>
+            <li>Visualization library with 8 chart types</li>
+          </ul>
+          <p><strong>Time Efficiency:</strong></p>
+          <ul>
+            <li>Research: 90 minutes (vs. 8 hours traditional)</li>
+            <li>Information architecture: 90 minutes (vs. 4 hours)</li>
+            <li>Visualization selection: 90 minutes (vs. 3 hours)</li>
+            <li>Total: 70% time reduction in early phases</li>
+          </ul>
+          <p><em>Limitations: This is an exploratory concept using AI-simulated research. It has NOT been validated with real campaign staff and would require extensive user testing before implementation.</em></p>
+
+          <h2>Dashboard Visual Design</h2>
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/87f334d6-d2f7-471f-94e3-e532de5484f1/DNC-dashboard.png?format=1500w" alt="Campaign dashboard visual design">
+          </figure>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/673ce69d-27fe-4c2d-be30-d0bb35ea8116/Frame+427318951.png?format=1500w" alt="Dashboard component detail">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>

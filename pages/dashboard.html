@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard &amp; Course Screens — Elle Steiner // UX Design Leader</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div data-include="nav"></div>
+
+  <main id="page">
+
+    <section class="case-header">
+      <div class="case-header__inner wrap">
+        <a class="breadcrumb" href="/">&larr; Back to Work</a>
+        <h1 class="case-title">Student Dashboard &amp; Course Screens</h1>
+        <p class="case-subtitle">Reducing Cognitive Overload in Online Learning</p>
+      </div>
+    </section>
+
+    <div class="case-hero scrim-banner">
+      <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/541c5d4b-218b-4df0-8c76-533e8a2f771e/education-hero.png?format=1500w" alt="">
+    </div>
+
+    <section class="section">
+      <div class="section__inner wrap">
+        <p class="case-meta">Role: Lead Product Designer &nbsp;//&nbsp; Timeline: 6-9 months &nbsp;//&nbsp; Team: 1 PM, 3-4 engineers</p>
+
+        <div class="prose">
+          <h2>The Design Challenge</h2>
+          <p>Design a student-facing dashboard that consolidates scattered course materials, assignments, and resources into a cohesive, prioritized view that adapts to individual learning progress.</p>
+
+          <h2>The Challenge</h2>
+          <p><em>Educated Suggestion Based on Common EdTech Problems:</em></p>
+          <p>Students using native higher-ed Pearson student dashboard struggled to navigate their coursework effectively. The original dashboard presented all assignments, materials, and resources simultaneously, creating cognitive overload and making it difficult to prioritize immediate tasks. Key problems included:</p>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/8d3490c8-cd7d-4a20-a914-9a512f7f9e73/Key-Problems.png?format=1500w" alt="Key problems identified">
+          </figure>
+
+          <h4>Problem 1: Information Overload</h4>
+          <p>The default dashboard view displayed every assignment in the course (typically 20-30 items), regardless of due date or completion status. Students reported feeling overwhelmed and unsure where to start.</p>
+          <p class="pull-quote">"I just want to see what's due this week, not everything for the entire semester."</p>
+
+          <h4>Problem 2: Scattered Course Materials</h4>
+          <p>Course readings, videos, and resources lived in separate sections from assignments. Students had to navigate through multiple screens to find materials related to their current work. Students averaged 4-5 clicks and 2+ minutes to locate a reading referenced in an assignment.</p>
+
+          <h4>Problem 3: Lack of Personalization</h4>
+          <p>All students saw identical views regardless of their progress, performance, or learning patterns. The system didn't surface relevant information based on individual context. Analytics showed 60% of students never accessed materials beyond the first three weeks, suggesting discovery issues.</p>
+
+          <h2>My Approach</h2>
+          <h3>Research &amp; Discovery</h3>
+          <p><strong>User Interviews (6 students).</strong> I conducted semi-structured interviews with 6 undergraduate students across different majors to understand their course navigation behaviors and pain points.</p>
+
+          <h4>Key Research Questions:</h4>
+          <ul>
+            <li>How do you typically start your online coursework?</li>
+            <li>Walk me through how you find assignments and materials</li>
+            <li>What's most frustrating about the current dashboard?</li>
+            <li>How do you prioritize your work across multiple courses?</li>
+          </ul>
+
+          <h4>Key Findings:</h4>
+          <p><strong>Finding 1: Prioritization Paralysis.</strong> Students reported spending 5+ minutes at the start of each session just figuring out what to work on. They wanted the system to "tell me what's most important right now."<br><em>Design Implication:</em> Create a prioritized view showing immediate next steps, not comprehensive lists.</p>
+          <p><strong>Finding 2: Context Switching Friction.</strong> Students opened an average of 4 different pages to complete one reading assignment (dashboard → assignment list → assignment detail → materials section → specific reading). This constant navigation disrupted focus.<br><em>Design Implication:</em> Co-locate materials with related assignments to reduce navigation.</p>
+          <p><strong>Finding 3: Progress Anxiety.</strong> Students checked grades obsessively (multiple times per day) because they felt uncertain about their standing in courses. They wanted reassurance about their progress.<br><em>Design Implication:</em> Surface performance feedback prominently to reduce anxiety.</p>
+
+          <h3>Usability Testing - Round 1 (Original Design)</h3>
+          <p><strong>Tasks:</strong></p>
+          <ol>
+            <li>Find your next upcoming assignment</li>
+            <li>Locate the reading for Assignment 3</li>
+            <li>Check your current grade in the course</li>
+          </ol>
+          <p><strong>Results:</strong></p>
+          <ul>
+            <li>Task 1 completion: 60% (students got lost in full assignment list)</li>
+            <li>Task 2 completion: 40% (materials section was hard to find/navigate)</li>
+            <li>Task 3 completion: 80% (grades were accessible but not prominent)</li>
+            <li>Average time per task: 2:15 minutes</li>
+          </ul>
+
+          <h4>Analytics Review &amp; Insights:</h4>
+          <ul>
+            <li>Only 35% of students accessed course materials sections regularly</li>
+            <li>Students averaged 8 dashboard visits per week but spent &lt;2 minutes per visit</li>
+            <li>Assignment submission rates dropped 25% after week 3 of semester</li>
+            <li>Mobile usage represented 60% of dashboard access (design needed mobile-first thinking)</li>
+          </ul>
+
+          <h3>Key Design Decisions</h3>
+
+          <h4>Decision 1: Progressive Disclosure for Assignment Lists</h4>
+          <p><strong>Problem:</strong> Showing all 20-30 assignments overwhelmed students and made prioritization difficult.</p>
+          <p><strong>Solution:</strong> Default view shows only the 3 most recent completed assignments and 3 upcoming assignments, with expandable "View All" option.</p>
+          <p><strong>Design Details:</strong></p>
+          <ul>
+            <li>Recent section: Shows completion status and grades</li>
+            <li>Upcoming section: Shows due dates and priority indicators (due today, due this week, due later)</li>
+            <li>"View All Assignments" link expands to full chronological list</li>
+            <li>Visual hierarchy uses color and size to differentiate priority levels</li>
+          </ul>
+          <p><strong>Rationale:</strong> Based on research showing students primarily cared about "what did I just finish?" and "what's next?", I designed for the 80% use case (immediate context) while maintaining access to comprehensive views for the 20% who need it.</p>
+          <p><strong>Testing Results:</strong></p>
+          <ul>
+            <li>Task completion finding next assignment: 60% → 95%</li>
+            <li>Time to identify current priority: 2:15 → 0:45 minutes</li>
+            <li>User feedback: "Finally! I can see what matters right now."</li>
+          </ul>
+
+          <h4>Decision 2: Contextual Material Integration</h4>
+          <p><strong>Problem:</strong> Materials lived separately from assignments, requiring multiple navigation steps and breaking focus.</p>
+          <p><strong>Solution:</strong> Integrated materials directly into assignment detail views, showing relevant readings/videos/resources in context.</p>
+          <p><strong>Design Details:</strong></p>
+          <ul>
+            <li>Assignment detail page includes "Required Materials" section</li>
+            <li>Each material (reading, video, etc.) displays inline or opens in overlay</li>
+            <li>Progress indicators show what's been viewed/completed</li>
+            <li>Quick links to related materials in other courses (cross-course discovery)</li>
+          </ul>
+          <p><strong>Rationale:</strong> Reducing context switching from 4+ page navigations to 1-2 clicks minimizes cognitive load and keeps students focused on their work.</p>
+          <p><strong>Testing Results:</strong></p>
+          <ul>
+            <li>Task completion locating materials: 40% → 90%</li>
+            <li>Time to access reading from assignment: 2+ min → 30 seconds</li>
+            <li>Materials access rates increased from 35% to 68% of students</li>
+          </ul>
+
+          <h4>Decision 3: Personalized Dashboard with Adaptive Content</h4>
+          <p><strong>Problem:</strong> Static dashboard showed same view to all students regardless of context.</p>
+          <p><strong>Solution:</strong> Dashboard adapts based on student's progress, upcoming deadlines, and recent activity.</p>
+          <p><strong>Personalization Logic:</strong> Example of what you might have designed:</p>
+          <ul>
+            <li>For students on track: Show next 2-3 assignments, recent grades, motivational messaging</li>
+            <li>For students behind: Highlight overdue items, show catch-up resources, surface support options</li>
+            <li>For students ahead: Suggest optional enrichment materials, preview upcoming modules</li>
+            <li>Time-based adaptation: Monday mornings show week overview, weekends show remaining week tasks</li>
+          </ul>
+          <p><strong>Design Details:</strong></p>
+          <ul>
+            <li>"Your Week at a Glance" widget shows priorities for next 7 days</li>
+            <li>"Recent Activity" shows last 3 completed items with feedback</li>
+            <li>"Up Next" highlights immediate priority with clear call-to-action</li>
+            <li>Performance indicators use subtle color coding (green = on track, yellow = attention needed)</li>
+          </ul>
+          <p><strong>Rationale:</strong> Students are in different places in their learning journey. One-size-fits-all dashboards don't serve anyone well. Adaptive content surfaces what each individual needs when they need it.</p>
+          <p><strong>Testing Results:</strong></p>
+          <ul>
+            <li>Dashboard engagement time: &lt;2 min → 4 min average (meaningful increase)</li>
+            <li>Assignment submission on-time rate: 75% → 88%</li>
+            <li>Student satisfaction with dashboard: 3.2/5 → 4.5/5</li>
+          </ul>
+
+          <h4>Decision 4: Performance Visibility &amp; Feedback</h4>
+          <p><strong>Problem:</strong> Students checked grades obsessively due to uncertainty about standing.</p>
+          <p><strong>Solution:</strong> Prominent, always-visible performance indicators reducing anxiety.</p>
+          <p><strong>Design Details:</strong> Example:</p>
+          <ul>
+            <li>Overall course grade displayed in header (color-coded: green ≥90%, yellow 80-89%, red &lt;80%)</li>
+            <li>Progress bar showing course completion percentage</li>
+            <li>Recent assignment grades with trend indicators (improving, steady, declining)</li>
+            <li>"You're doing well!" or "Let's get back on track" contextual messaging</li>
+          </ul>
+          <p><strong>Rationale:</strong> Surfacing performance information prominently reduces checking behavior while providing reassurance or early warning signals.</p>
+
+          <h4>Decision 5: Mobile-First Information Hierarchy</h4>
+          <p><strong>Problem:</strong> 60% of dashboard access was mobile, but interface wasn't optimized for small screens.</p>
+          <p><strong>Solution:</strong> Mobile-first design with progressive enhancement for desktop.</p>
+          <p><strong>Design Details:</strong></p>
+          <ul>
+            <li>Card-based layout stacks vertically on mobile</li>
+            <li>Priority actions (start assignment, view materials) prominently placed</li>
+            <li>Touch-friendly target sizes (minimum 44x44px)</li>
+            <li>Swipe gestures for navigation between sections</li>
+            <li>Persistent bottom navigation for key sections</li>
+          </ul>
+          <p><strong>Rationale:</strong> Students access coursework on-the-go between classes, during commutes, and in various contexts. Mobile experience must be primary, not secondary.</p>
+
+          <h2>Information Architecture</h2>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/9a57c687-c907-4f86-9e58-770bd98fe527/sitemap.png?format=1500w" alt="Site map showing before and after information architecture">
+          </figure>
+
+          <p><strong>Before: Fragmented Structure.</strong> Example of typical problems:</p>
+          <ul>
+            <li>Dashboard (overview only, no actionable items)</li>
+            <li>Assignments (separate section, chronological list of all)</li>
+            <li>Materials (separate section, organized by week or type)</li>
+            <li>Grades (separate section, grade book view)</li>
+            <li>Resources (separate section, help/support)</li>
+          </ul>
+          <p><strong>After: Integrated, Task-Focused Structure.</strong> Example of improved structure:</p>
+          <ul>
+            <li>Dashboard (personalized, actionable view)</li>
+            <li>Your Week (prioritized upcoming work)</li>
+            <li>In Progress (current assignments with materials)</li>
+            <li>Completed (recent work with grades/feedback)</li>
+            <li>Course Materials (browsable library)</li>
+          </ul>
+          <p><strong>Assignment Detail View</strong></p>
+          <ul>
+            <li>Requirements &amp; Instructions</li>
+            <li>Required Materials (inline)</li>
+            <li>Submission Area</li>
+            <li>Related Resources</li>
+          </ul>
+          <p><strong>Key IA Changes:</strong></p>
+          <ul>
+            <li>Dashboard became action-oriented, not just informational</li>
+            <li>Materials integrated with assignments, not siloed</li>
+            <li>Grades surfaced contextually, not hidden in separate section</li>
+            <li>Navigation reduced from 4-5 levels to 2-3 levels</li>
+          </ul>
+
+          <h2>Testing &amp; Iterations</h2>
+          <h3>Round 1: Initial Prototype</h3>
+          <p><strong>Testing Setup:</strong></p>
+          <ul>
+            <li>Participants: 8 students (mix of majors, class levels)</li>
+            <li>Method: Remote moderated usability testing via Zoom</li>
+            <li>Tasks: Find next assignment, locate materials, check grade, submit work</li>
+          </ul>
+          <p><strong>Task Success Rates:</strong></p>
+          <ul>
+            <li>Find next assignment: 75% (improved from 60% baseline)</li>
+            <li>Locate reading for assignment: 70% (improved from 40% baseline)</li>
+            <li>Check current grade: 90% (improved from 80% baseline)</li>
+          </ul>
+
+          <h4>Key Issues Identified:</h4>
+          <p><strong>Issue 1: "View All" Link Not Noticed.</strong> 5 of 8 users didn't realize they could expand to see full assignment list. They thought only 6 assignments existed.</p>
+          <p><strong>Changes Made:</strong></p>
+          <ul>
+            <li>Changed "View All" to "Show X More Assignments" (specific number)</li>
+            <li>Made link more prominent with button styling instead of text link</li>
+            <li>Added subtle indicator (arrow icon) suggesting expandable content</li>
+          </ul>
+          <p><strong>Issue 2: Materials Section Unclear.</strong> Users understood materials were integrated but weren't sure what was required vs. optional.</p>
+          <p><strong>Changes Made:</strong></p>
+          <ul>
+            <li>Added "Required" vs. "Optional" labels</li>
+            <li>Designed checklist-style completion indicators</li>
+            <li>Made required materials more visually prominent (larger, colored border)</li>
+          </ul>
+          <p><strong>Issue 3: Performance Indicators Caused Anxiety.</strong> Students with grades below 80% reported the red color coding felt "accusatory" and "stressful."</p>
+          <p><strong>Changes Made:</strong></p>
+          <ul>
+            <li>Softened color palette (red → orange for 70-79%, removed red entirely)</li>
+            <li>Added encouraging messaging regardless of performance</li>
+            <li>Made trend (improving, steady) more prominent than absolute grade</li>
+          </ul>
+
+          <h3>Round 2: Refined Prototype</h3>
+          <p><strong>Task Success Rates:</strong></p>
+          <ul>
+            <li>Find next assignment: 95% (target achieved)</li>
+            <li>Locate materials: 90% (significant improvement)</li>
+            <li>Check grade: 95% (maintained high performance)</li>
+          </ul>
+          <p><strong>User Feedback:</strong></p>
+          <ul>
+            <li>"This is so much clearer"</li>
+            <li>"I actually want to use this - it doesn't overwhelm me"</li>
+            <li>"Finally, a dashboard that tells me what matters"</li>
+          </ul>
+          <p><strong>Satisfaction Ratings:</strong></p>
+          <ul>
+            <li>Overall ease of use: 4.5/5 (up from 3.2/5 for original design)</li>
+            <li>Likelihood to recommend: 4.3/5</li>
+            <li>Perceived usefulness: 4.7/5</li>
+          </ul>
+
+          <h2>Outcomes &amp; Impact</h2>
+
+          <figure class="case-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/53415921-cffb-4cec-9358-98e81dbc49b1/Design-Outcomes.png?format=1500w" alt="Design outcomes summary">
+          </figure>
+
+          <h3>Measured Improvements</h3>
+          <p><strong>Usability Metrics:</strong></p>
+          <ul>
+            <li>Task completion rate: 60% → 95% (finding next assignment)</li>
+            <li>Time to locate materials: 2+ min → 30 seconds (75% reduction)</li>
+            <li>Dashboard engagement time: &lt;2 min → 4 min (more meaningful use)</li>
+          </ul>
+          <p><strong>Engagement Metrics:</strong></p>
+          <ul>
+            <li>Materials access rate: 35% → 68% of students</li>
+            <li>Assignment submission on-time rate: 75% → 88%</li>
+            <li>Dashboard daily active users: +40% increase</li>
+            <li>Mobile completion rate: 45% → 72%</li>
+          </ul>
+          <p><strong>User Satisfaction:</strong></p>
+          <ul>
+            <li>Overall satisfaction: 3.2/5 → 4.5/5</li>
+            <li>Ease of use rating: 4.5/5</li>
+            <li>Would recommend: 4.3/5</li>
+            <li>"Most useful feature" rankings: Prioritized assignment view (78%), integrated materials (65%), performance visibility (52%)</li>
+          </ul>
+
+          <h4>Qualitative Feedback</h4>
+          <p class="pull-quote">"I used to feel lost every time I logged in. Now I know exactly what to do."</p>
+          <p class="pull-quote">"The old system felt like homework to just navigate. This feels like it's actually helping me learn."</p>
+          <p class="pull-quote">"I love that I can see I'm on track without clicking around forever."</p>
+
+          <h3>What Worked Well</h3>
+          <p><strong>1. Progressive Disclosure Strategy.</strong> Showing the most relevant information first (recent + upcoming) while maintaining access to comprehensive views served the majority use case without sacrificing flexibility.</p>
+          <p><strong>2. Integrated Materials.</strong> Co-locating resources with assignments eliminated navigation friction and significantly increased materials usage. Students no longer had to "remember to check the materials section."</p>
+          <p><strong>3. Mobile-First Approach.</strong> Designing for mobile constraints first resulted in a cleaner, more focused experience on all devices. Desktop users benefited from simplified interface.</p>
+
+          <h3>Key Takeaways</h3>
+          <p><strong>Design for Context, Not Comprehensiveness.</strong> Students don't need to see everything; they need to see what's relevant right now. Progressive disclosure reduces cognitive load while maintaining power-user access.</p>
+          <p><strong>Integration Beats Navigation.</strong> Every extra click is an opportunity for students to get lost or distracted. Bringing related content together improves focus and reduces friction.</p>
+          <p><strong>Personalization Requires Thoughtful Defaults.</strong> Adaptive content is powerful but must degrade gracefully. The default view (when system doesn't have enough data to personalize) must still be useful.</p>
+        </div>
+
+        <div class="case-gallery case-gallery--three">
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/daa076e0-606b-4417-aa5c-90eb7957ade1/01_student_dash.png?format=1000w" alt="">
+            <figcaption>Student Dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/f93714df-51b8-417d-9640-1e114b43b3f3/02_performance.png?format=1000w" alt="">
+            <figcaption>Student Performance</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c4af91ac-7e34-4b54-ba98-03d89a432507/03_materials.png?format=1000w" alt="">
+            <figcaption>Course Materials</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/3e15bff5-3498-4573-9ccf-5932d647ecb4/04_assign_detail.png?format=1000w" alt="">
+            <figcaption>Reading Assignment</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/fb3faf3c-5a4a-4cfa-a040-887db451c657/05_mobile_dash.png?format=1000w" alt="">
+            <figcaption>Student Dashboard // mobile</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/a5fa8496-ccc1-4edc-afa5-e276b461d7fd/06_performance.png?format=1000w" alt="">
+            <figcaption>Student Performance // mobile</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/89d5daf5-aedf-4a6b-8928-ca93e6949235/07_materials.png?format=1000w" alt="">
+            <figcaption>Course Materials // mobile</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/ce3bc347-3ad6-4dfe-9de1-d7b303056926/08_audio.png?format=1000w" alt="">
+            <figcaption>Course Audio Files // mobile</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/7e6085c0-7f60-4a01-bdbb-7ce2fe21b31d/09_reading.png?format=1000w" alt="">
+            <figcaption>Reading Assignment // mobile</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>
