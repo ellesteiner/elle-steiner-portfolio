@@ -12,19 +12,99 @@
 
   <main id="page">
 
-    <section class="hero">
-      <div class="hero__inner wrap">
-        <div class="hero__text">
-          <h1>I'm Elle.</h1>
-          <p>I lead design teams that deliver. With 10+ years in product design &amp; 3+ years managing designers, I scale design operations, establish systems that work, &amp; turn complex problems into solutions users understand.</p>
+    <section class="home-hero">
+      <div class="home-hero__inner wrap">
+        <div class="home-hero__text">
+          <h1>Products that ship. Teams that grow. Faster than you'd expect.</h1>
+          <p class="home-hero__subhead">I'm Elle Steiner, a design leader with 10+ years running UX teams for mission-critical software, who now builds and ships full products herself using AI.</p>
+          <div class="home-hero__ctas">
+            <a class="btn" href="/pages/contact.html">Let's talk</a>
+            <a class="text-link" href="/pages/resume.html">View resume</a>
+          </div>
         </div>
-        <div class="hero__image">
-          <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/46548d07-1302-49ad-84c3-8c1dbe66ca48/Elle-Steiner.png?format=1500w" alt="Elle Steiner">
+        <div class="home-hero__photo">
+          <img src="/images/Elle-Steiner.png" alt="Elle Steiner, Design Leader">
+          <div class="home-hero__photo-caption">
+            <p>Elle Steiner</p>
+            <p>Design Leader</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="proof" data-reveal>
+      <div class="wrap">
+        <div class="proof__grid">
+          <div class="proof__stat">
+            <p class="proof__number">40%</p>
+            <p class="proof__label">Faster design-to-dev handoff, Kessel Run</p>
+          </div>
+          <div class="proof__stat">
+            <p class="proof__number">3×</p>
+            <p class="proof__label">Faster feature delivery, ConsumersAdvocate</p>
+          </div>
+          <div class="proof__stat">
+            <p class="proof__number">50%</p>
+            <p class="proof__label">Increase in donations, Brigham &amp; Women's</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="wrap">
+        <div class="capabilities__grid capabilities__grid--four">
+          <div class="capability">
+            <h3>I design in partnership</h3>
+            <p>At Pearson and Brigham &amp; Women's Hospital, I worked closely with product and engineering teams to design EdTech and healthcare experiences used by millions, always as part of the team, never apart from it.</p>
+          </div>
+          <div class="capability">
+            <h3>I build systems, not silos</h3>
+            <p>As Creative Director at ConsumersAdvocate, I partnered with marketing and leadership to stand up the org's first end-to-end design process, one built for the whole team to use, not just for me.</p>
+          </div>
+          <div class="capability">
+            <h3>I grow collaborative teams</h3>
+            <p>That same approach scaled: 50+ designers across 7 teams at Kessel Run, 100,000+ students served at Stride, both built by working closely with engineering, product, and executive stakeholders, not by working around them.</p>
+          </div>
+          <div class="capability">
+            <h3>I build with AI, alongside my team</h3>
+            <p>Now I direct AI coding tools to design and ship real, working applications, in service of the broader product and engineering effort, not as a replacement for it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise">
+      <div class="wrap">
+        <div class="expertise__grid">
+          <div class="expertise__col">
+            <h3>Design systems that scale</h3>
+            <p>I built and govern a 57-component design system spanning 7 teams. It didn't just standardize the visual language, it cut design-to-development handoff time by 40%, while building accessibility (WCAG compliance) into the foundation instead of bolting it on later. Consistency across platforms isn't a style guide sitting in a drawer, it's infrastructure people actually use.</p>
+          </div>
+          <div class="expertise__col">
+            <h3>People, not just projects</h3>
+            <p>I built and led a civilian onboarding program in partnership with U.S. Air Force personnel, work that earned a formal commendation for improving comprehension and organizational alignment across the unit. Day to day, that same approach shows up as bi-weekly 1:1s, individualized career roadmaps, and a skills matrix for 50+ designers, the kind of leadership that shows up in retention and delivery quality, not just morale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="wrap">
+        <div class="testimonials__grid">
+          <div class="testimonial">
+            <p class="testimonial__quote">"I tried to hire Elle but couldn't afford her. I got to watch her elevate teams in a way they simply hadn't seen before."</p>
+            <p class="testimonial__attribution">Kevin Glennon, COO, Astrobellum</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__quote">"I have actually worked with Elle at multiple companies. That in itself should speak for itself."</p>
+            <p class="testimonial__attribution">Seth Bassler, Lead Product Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-work-start">
       <div class="section__inner wrap">
         <a class="scrim-banner" href="/pages/designsystems.html">
           <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/a4e89709-5722-4b35-91e2-9fc6501040ba/DS-hero-pic+1.png?format=1500w" alt="">
@@ -141,5 +221,6 @@
   <div data-include="footer"></div>
 
   <script src="/js/include.js"></script>
+  <script src="/js/reveal.js"></script>
 </body>
 </html>
