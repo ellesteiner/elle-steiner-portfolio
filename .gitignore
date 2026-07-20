@@ -15,3 +15,5 @@ design-reference/
 
 # Node (in case tooling is added later)
 node_modules/
+.vercel
+.env*
