@@ -29,7 +29,7 @@
         <p class="case-meta">Role: Lead Designer &nbsp;//&nbsp; Timeline: 4 months &nbsp;//&nbsp; Team: 2 designers, 5 engineers &nbsp;//&nbsp; Impact: 7 applications</p>
 
         <div class="prose">
-          <p>Led design and implementation of a standardized connection indicator component across 7 Air Force applications, reducing user confusion about connection status by 75% and establishing reusable patterns adopted throughout the design system.</p>
+          <p>I led design and implementation of a standardized connection indicator component across 7 Air Force applications, replacing inconsistent, app-specific indicators with one reusable pattern now adopted throughout the design system.</p>
 
           <h4>Key Outcomes:</h4>
           <ul>
@@ -39,34 +39,8 @@
           </ul>
 
           <h2>The Problem</h2>
-          <h3>User Impact</h3>
-          <p>Warfighters using our mission-critical software suite experienced significant confusion around network connectivity status. With seven different applications each displaying connection information differently (or not at all), users couldn't confidently determine whether data was current or stale.</p>
-
-          <h4>Pain Points Identified:</h4>
-          <ul>
-            <li>"I don't know if I'm seeing live data or if my connection dropped"</li>
-            <li>"Each app shows connection status differently, I can't tell what's actually happening"</li>
-            <li>"The app stops working and I don't know if it's my network or a bug"</li>
-            <li>"I make mission-critical decisions on this data, I need to know it's current"</li>
-          </ul>
-
-          <h3>Business Impact</h3>
-          <p>Support ticket analysis revealed connection-related confusion was consuming significant resources:</p>
-          <ul>
-            <li>20+ monthly support tickets related to connection status across 7 apps</li>
-            <li>Average 45-minute resolution time per ticket</li>
-            <li>User trust issues impacting satisfaction scores</li>
-            <li>Inconsistent experiences across product suite</li>
-          </ul>
-
-          <h3>Technical Complexity</h3>
-          <p>The challenge wasn't just design - it was technical:</p>
-          <ul>
-            <li>Applications had different connectivity requirements (real-time vs. periodic sync)</li>
-            <li>Network conditions varied dramatically (tactical field operations vs. secure facilities)</li>
-            <li>Some apps required offline functionality with sync queues</li>
-            <li>Existing solutions in 5 apps were all implemented differently</li>
-          </ul>
+          <p>Warfighters using our mission-critical software suite couldn't tell whether the data in front of them was current or stale — seven applications each displayed connection status differently, or not at all. As one put it, "I don't know if I'm seeing live data or if my connection dropped," and another: "I make mission-critical decisions on this data, I need to know it's current."</p>
+          <p>The confusion showed up in the numbers too: 20+ monthly support tickets across the 7 apps, each averaging 45 minutes to resolve. The technical picture was just as fragmented — apps had different connectivity requirements (real-time vs. periodic sync), some needed offline functionality with sync queues, and the 5 apps that already had some kind of indicator had each built it differently.</p>
 
           <div class="compare-grid">
             <figure class="case-image">
@@ -82,81 +56,41 @@
           <h2>My Approach</h2>
 
           <h3>Phase 1: Research &amp; Discovery</h3>
-          <p>I assembled a cross-functional working group including representatives from all 7 product teams, backend engineers, subject matter experts (warfighters), and security team members. Through interviews with 12 warfighters, analysis of 50+ support tickets, and field observations during exercises, I uncovered the critical insight: users needed to understand what connection status meant for their specific workflow, not just binary connectivity.</p>
+          <p>I assembled a cross-functional working group — all 7 product teams, backend engineers, warfighters, and security — and ran interviews with 12 warfighters plus analysis of 50+ support tickets. The insight that shaped everything: users needed to understand what connection status meant for their specific workflow, not just binary connectivity.</p>
           <p class="pull-quote">Key Decision: Framed the problem around context-specific needs (warfighter needs current targeting data, analyst needs latest intel updates) rather than generic connection indicators. This insight drove all subsequent design decisions.</p>
-          <p>Research synthesis with the team identified 3 distinct connection states users needed to differentiate, 5 mission-critical scenarios where connection status impacted decisions, and 4 edge cases where existing solutions failed.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/0ade37bf-a4af-4289-9f3c-ca25ff69dbce/timeline.png?format=1500w" alt="Project timeline across four phases">
           </figure>
 
           <h3>Phase 2: Collaborative Design</h3>
-          <p>I partnered with the development team from day one, holding weekly design-dev sessions to gather technical feasibility feedback and understand backend connectivity constraints. This revealed that different apps had fundamentally different technical capabilities.</p>
-          <p class="pull-quote">Key Decision: Designed a three-tier progressive enhancement system—Basic (binary connected/disconnected), Enhanced (connection quality), and Advanced (sync status with timestamp). This allowed rapid integration across all 7 apps while enabling teams to enhance based on specific needs rather than forcing a one-size-fits-all solution.</p>
-          <p>I tested 3 design directions with 8 warfighters. The winning solution (icon + color + text label) achieved 94% accuracy and WCAG compliance, compared to 62% for icon-only. Accessibility was non-negotiable: I ensured color wasn't the sole differentiator, added clear text labels for screen readers, and tested with keyboard navigation.</p>
+          <p>I partnered with the dev team from day one to map backend constraints, then tested three design directions with 8 warfighters. The winner — icon + color + text label — hit 94% accuracy versus 62% for icon-only, so I built it as a three-tier progressive-enhancement system (Basic, Enhanced, Advanced) letting every app integrate at whatever level its backend supported, rather than forcing a one-size-fits-all build.</p>
 
           <h3>Phase 3: Development Partnership</h3>
-          <p>I created comprehensive documentation covering component API specifications, visual design specs, interaction behaviors, edge case handling, and accessibility requirements. During the 3-month integration period, I held daily office hours to answer implementation questions from 7 product teams and reviewed pull requests for design consistency.</p>
-          <p class="pull-quote">Key Decision: When one team's backend couldn't distinguish between "poor connection" and "timeout," I redesigned the indicator to combine these states with clear user messaging rather than forcing a technical solution—this actually improved the experience and prevented implementation delays.</p>
-          <p>The detailed specifications and real-time support enabled teams to integrate the component in an average of 2 days versus the previous 2-week timeline for similar features.</p>
-
-          <h3>Phase 4: Launch &amp; Iteration (Month 4)</h3>
+          <p>I documented the component's API, visual specs, interaction behavior, and edge cases, then held daily office hours during the 3-month rollout to support all 7 teams. When one team's backend couldn't distinguish "poor connection" from "timeout," I combined those states with clearer messaging rather than forcing a technical fix — between the documentation and real-time support, teams integrated the component in an average of 2 days versus the previous 2-week timeline.</p>
 
           <h2>Design Solution</h2>
           <h3>Component Architecture</h3>
-          <p>Three Connection States:</p>
-
-          <h4>1. Connected (Green)</h4>
-          <ul>
-            <li>Visual: Green dot + "Connected" label</li>
-            <li>User understanding: "My data is current and I'm receiving live updates"</li>
-            <li>Technical state: Active websocket connection with recent heartbeat</li>
-          </ul>
-
-          <h4>2. Partially Connected (Yellow)</h4>
-          <ul>
-            <li>Visual: Yellow dot with rotating animation + "Partially Connected" label</li>
-            <li>User understanding: "Connection was lost, app is attempting to reconnect"</li>
-            <li>Technical state: Connection dropped, retry logic active, using cached data</li>
-          </ul>
-
-          <h4>3. Critical Connection (Red)</h4>
-          <ul>
-            <li>Visual: Red dot + "Critical Connection" label + last sync timestamp</li>
-            <li>User understanding: "No connection, viewing cached data from [time]"</li>
-            <li>Technical state: Connection failed, operating in offline mode</li>
-          </ul>
-
-          <h4>Interaction Design:</h4>
-          <ul>
-            <li>Hover: Displays detailed connection information tooltip</li>
-            <li>Click: Opens connection status modal with troubleshooting steps</li>
-            <li>Transitions: Smooth 300ms fade between states (not jarring)</li>
-          </ul>
+          <p>Three connection states, always differentiated by color, icon, and text label together, never color alone: Connected (green) tells users their data is live; Partially Connected (yellow, with a subtle reconnecting animation) tells them the app is retrying and showing cached data; and Critical Connection (red, with a last-synced timestamp) tells them they're fully offline.</p>
 
           <h3>Visual Design Decisions</h3>
-          <p><strong>Placement in application header (top-right)</strong> — User testing showed 95% discoverability versus 62% for footer placement. Users consistently checked the header for status indicators.</p>
-          <p><strong>Color + text strategy</strong> — Used semantic colors (green/yellow/red) matching mental models, but added text labels to ensure accessibility. All color combinations met WCAG AA 4.5:1 contrast ratio minimum and were tested with colorblind simulation tools.</p>
-          <p><strong>Size and prominence</strong> — Designed to be visible without distracting during normal use, with subtle pulse animation during state changes to draw attention when needed.</p>
+          <p>I placed the indicator in the application header, top-right — testing showed 95% discoverability there versus 62% for footer placement. Color mapped to familiar mental models (green/yellow/red) but never carried meaning alone: every state paired a WCAG AA-compliant text label, verified with colorblind simulation, with a subtle pulse animation that drew attention only when the state actually changed.</p>
 
           <h2>Collaboration &amp; Leadership</h2>
-          <h3>Cross-Functional Coordination</h3>
-          <p>I led collaboration across 7 product teams, mentoring a junior designer on component variants for Phase 2 enhancements while they successfully delivered new features. By establishing a shared communication channel, creating living documentation, and participating in engineering standups, I built trust through technical understanding and responsiveness.</p>
-
-          <h3>Stakeholder Management</h3>
-          <p>Not all product teams initially prioritized integration. I presented data showing 75% of connection-related support tickets came from their apps, demonstrated the prototype's improved experience, and offered implementation support. This secured commitment from all 7 teams within 2 weeks.</p>
-
-          <h3>Technical Challenge</h3>
-          <p>Backend teams had different connectivity architectures. I facilitated a technical design session with all backend engineers, identified commonalities 80% could leverage, and designed a flexible component API allowing customization while maintaining consistency. The component successfully adapted to 7 different backend architectures.</p>
-
-          <h3>Design System Contribution</h3>
-          <p>I integrated the component into the centralized Figma library with comprehensive usage documentation, video walkthroughs, and contribution guidelines. This established reusable patterns that reduced implementation time from 2 weeks to 2 days per app.</p>
-          <p>Impact: The component became the template for other status indicators (loading, errors) and a case study in the design system documentation. Post-launch adoption by 2 additional apps demonstrated its value, and the process became the standard for future component development.</p>
+          <p>I led collaboration across all 7 product teams and mentored a junior designer on component variants for the next phase. Not every team prioritized integration at first, so I showed them their own support-ticket data, demoed the improved experience, and offered hands-on implementation support — that secured commitment from all 7 teams within 2 weeks.</p>
+          <p>Backend teams each had different connectivity architectures, so I ran a technical design session to find common ground and built a flexible component API that adapted to all 7 without breaking consistency. Once it was in the centralized Figma library with full documentation, integration time for new apps dropped from 2 weeks to 2 days, and the component became the template for every status indicator that followed.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/3479b172-799d-4d38-a7a3-072bf6bfe046/DS-Context-n-bkgd.png?format=1500w" alt="Component in the context of the design system">
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__inner wrap case-cta">
+        <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>
 

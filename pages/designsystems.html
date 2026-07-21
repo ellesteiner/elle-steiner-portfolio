@@ -38,191 +38,52 @@
 
         <div class="prose">
           <h2>The Challenge</h2>
-          <p>Seven Air Force apps operated independently with no shared design standards, resulting in 17 different button variations, inconsistent interactions, and fragmented user experiences. Users struggled to transfer knowledge between apps, while Designers and Engineers duplicated effort solving the same problems repeatedly. I built the case for a comprehensive Design System by demonstrating that inconsistency was costing the organization in rework and inefficiency.</p>
+          <p>Seven Air Force apps operated independently with no shared design standards: 17 different button variations, inconsistent interactions, and design-to-dev hand-offs averaging two weeks per feature. An audit found 85% of components were being recreated from scratch by different teams. I built the case for a comprehensive Design System by showing how much that inconsistency was costing the organization in rework.</p>
 
           <h2>My Approach</h2>
-          <h3>Research &amp; Strategic Foundation</h3>
-          <p>I conducted a comprehensive audit across all 7 apps, documenting every component, pattern and interaction. The findings were striking: 17 button variations, 12 different navigation patterns, and few shared components. I synthesized this research into a compelling business case showing how standardization would eliminate duplicate work and accelerate product development.</p>
 
-          <h4>Key Research Findings:</h4>
-          <ul>
-            <li>17 unique button styles across 7 apps (should be 1 flexible component)</li>
-            <li>Design-to-Dev hand-off averaging 2 weeks per feature due to lack of standards</li>
-            <li>85% of components were recreated multiple times across teams</li>
-            <li>User testing revealed confusion when switching between apps</li>
-          </ul>
+          <h3>Research &amp; the case for change</h3>
+          <p>I audited all 7 apps, documenting every component, pattern, and interaction, then synthesized the findings into the business case for a shared Design System. Four principles — flexibility with constraints, accessibility first, progressive enhancement, and documentation as design — guided every decision from there forward.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/83114ef6-9ac9-479c-8201-d950e4575110/17-button-variations.png?format=1500w" alt="17 button variations found across the 7 applications">
             <figcaption>17 button variations found across the 7 applications during the audit.</figcaption>
           </figure>
 
-          <h4>Design Principles Established:</h4>
-          <p>Based on user research and technical constraints, I established four core principles that would guide all design system decisions:</p>
-          <ul>
-            <li><strong>Flexibility with Constraints</strong> — Components must adapt to product needs while maintaining consistency</li>
-            <li><strong>Accessibility First</strong> — WCAG 2.1 AA compliance as baseline, not afterthought</li>
-            <li><strong>Progressive Enhancement</strong> — Basic functionality works everywhere, enhanced features where supported</li>
-            <li><strong>Documentation as Design</strong> — If it's not documented, it doesn't exist</li>
-          </ul>
-
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/46f860e5-173e-48a4-a99c-56ccbf1178a8/Design-Principles.png?format=1500w" alt="The four design principles guiding the system">
           </figure>
 
-          <h3>Component Architecture &amp; Design Strategy</h3>
-          <p>I designed a three-tier component system that balanced flexibility with consistency:</p>
-          <ul>
-            <li><strong>Foundation Layer:</strong> Design styles (color, typography, spacing, elevation) providing single source of truth</li>
-            <li><strong>Component Layer:</strong> 45 core components with customizable properties via Figma overrides</li>
-            <li><strong>Pattern Layer:</strong> Documented interaction patterns and page templates for complex workflows</li>
-          </ul>
-          <p><strong>Override Architecture Strategy:</strong> Each component includes carefully designed override options that allow customization without breaking consistency.</p>
-          <p>For example, the button component includes 8 variants (primary, secondary, tertiary, disabled, size, link, icon-only, split) with configurable sizes, states, and icon placement, but maintains consistent spacing, typography, and interaction behaviors across all variants.</p>
-          <p>This architecture enabled teams to customize components for their specific needs (e.g., domain-specific icons, contextual labels) while preventing the fragmentation that created 17 different buttons in the first place.</p>
+          <h3>Architecture &amp; governance</h3>
+          <p>I designed a three-tier system: a Foundation layer for shared styles, a Component layer of 45 core components with Figma-override customization, and a Pattern layer for complex workflows — flexible enough for teams to adapt without recreating the fragmentation that produced 17 different buttons in the first place.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/92a07046-b24f-45e3-8fbc-7abb278b5b3e/Screenshot+2026-01-08+at+10.54.19+AM.png?format=1500w" alt="Component library overview">
           </figure>
 
-          <h3>Design System Documentation</h3>
-          <p>I created comprehensive documentation that goes beyond visual specs to include interaction behaviors, accessibility requirements, usage guidelines, and code examples. The documentation answers three questions for every component:</p>
-          <ul>
-            <li>When to use this (and when not to)</li>
-            <li>How to implement this (design and code specs)</li>
-            <li>Why it works this way (design decisions and rationale)</li>
-          </ul>
-
-          <h4>Example - Button Documentation Structure:</h4>
-          <ul>
-            <li>Visual specifications (spacing, typography, colors, states)</li>
-            <li>Interaction specifications (hover, focus, active, disabled, loading)</li>
-            <li>Accessibility requirements (contrast ratios, keyboard navigation, screen reader labels)</li>
-            <li>Usage guidelines (button hierarchy, when to use primary vs. secondary)</li>
-            <li>Code examples (React component with props)</li>
-            <li>Design decisions log (why we chose these variants, what we rejected and why)</li>
-          </ul>
-          <p>The "why" documentation proved invaluable, it prevented teams from making changes that would undermine the system and provided context when revisiting designs months later.</p>
+          <p>Documentation went beyond visual specs to cover interaction behavior, accessibility requirements, and the reasoning behind each decision, so teams understood not just how to use a component, but why it worked that way.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c844170b-df77-475e-b328-cef942d18218/specs.png?format=1500w" alt="Component documentation specs">
           </figure>
 
-          <h3>Governance Model Design</h3>
-          <p>I designed a sustainable governance structure that would outlive my direct involvement:</p>
-
-          <h4>Contribution Process:</h4>
-          <ol>
-            <li>Team identifies need for new component or pattern</li>
-            <li>Submit proposal with use cases and justification</li>
-            <li>Design System team reviews for duplication/fit</li>
-            <li>If approved, collaborative design sprint with proposing team</li>
-            <li>Component added to library with full documentation</li>
-          </ol>
-
-          <h4>Decision Framework:</h4>
-          <p>I established clear criteria for design decisions to reduce ambiguity and empower teams:</p>
-          <ul>
-            <li><strong>Consistency vs. Flexibility:</strong> Default to consistency; flex only when user research supports it</li>
-            <li><strong>Accessibility:</strong> Non-negotiable WCAG 2.1 AA minimum</li>
-            <li><strong>Technical Feasibility:</strong> If it can't be built consistently, redesign it</li>
-            <li><strong>Scalability:</strong> Will this work when we have 20 apps instead of 7?</li>
-          </ul>
-          <p>This framework enabled faster decisions and reduced the need for escalation.</p>
+          <p>Governance ran on a simple contribution process (propose, review, design sprint, ship with documentation) and a small set of decision criteria: default to consistency, meet WCAG 2.1 AA as a floor, and ask whether a choice would still hold at 20 apps instead of 7.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/bd942992-5305-4445-bd40-5939449b63e1/guidance.png?format=1500w" alt="Governance and contribution guidance">
           </figure>
 
-          <h3>Adoption Strategy</h3>
-          <p>I designed a phased rollout that reduced resistance and built momentum:</p>
-          <ul>
-            <li><strong>Phase 1:</strong> Pilot with 2 engaged teams, surface issues, iterate quickly</li>
-            <li><strong>Phase 2:</strong> Expand to 3 more teams with documented best practices from pilots</li>
-            <li><strong>Phase 3:</strong> Mandate adoption for remaining teams with proven success stories</li>
-            <li><strong>Phase 4:</strong> Extend to new applications as they launch</li>
-          </ul>
-          <p>I created training materials including video walk-throughs, live workshops and office hours for implementation support. This reduced integration time from 2 weeks to 2 days per application.</p>
+          <h3>Rolling it out</h3>
+          <p>I rolled the system out in phases, starting with two engaged teams to surface issues early, then expanding with proven patterns before mandating adoption org-wide. Training materials, workshops, and office hours cut integration time from two weeks to two days per application.</p>
 
-          <h2>Implementation &amp; Governance</h2>
-          <h3>Collaboration with Engineering</h3>
-          <p>I partnered with the 5-person development team to build the component library in code, using MUI as a foundation with extensive customization. I created a parallel structure between Figma and code, ensuring Designers and Developers used the same language and mental models.</p>
-
-          <h4>Design-Dev Process:</h4>
-          <ul>
-            <li>Weekly design reviews where developers provided technical feasibility feedback</li>
-            <li>Shared documentation in GitLab with design specs and code examples</li>
-            <li>QA process where I reviewed implemented components against design specs</li>
-            <li>Fast iteration cycle: design → review → implement → QA → deploy</li>
-          </ul>
-          <p>When technical constraints conflicted with design vision (e.g., a team's backend couldn't support real-time connection status), I redesigned solutions that worked within constraints rather than forcing impossible implementations. This pragmatic approach built trust and resulted in higher-quality outcomes.</p>
+          <h3>Working with engineering</h3>
+          <p>I partnered with our 5-person dev team to build the component library in code, using MUI as a foundation with extensive customization, weekly design reviews, and shared documentation in GitLab so design and engineering worked from the same source of truth. When a technical constraint conflicted with the design vision, I redesigned within the constraint rather than forcing an impossible build, a pragmatic approach that built trust and better outcomes.</p>
 
           <h2>Outcomes &amp; Impact</h2>
-          <h3>Measurable Results</h3>
-          <h4>Efficiency Gains:</h4>
-          <ul>
-            <li>40% reduction in Design-to-Development hand-off time</li>
-            <li>Component reuse increased from 15% to 75%</li>
-            <li>Design iteration cycles reduced from weeks to days</li>
-          </ul>
-          <h4>Quality Improvements:</h4>
-          <ul>
-            <li>85% decrease in UI inconsistencies across applications</li>
-            <li>User satisfaction scores improved 25% due to consistent experiences</li>
-            <li>Accessibility compliance increased from 60% to 98%</li>
-          </ul>
-          <h4>Scalability:</h4>
-          <ul>
-            <li>System supported growth from 7 to 9 applications without additional design resources</li>
-            <li>New applications integrated in 2 days vs. 2 weeks previously</li>
-          </ul>
-
           <h3>System Evolution</h3>
-          <p>The Design System continues to evolve based on product needs:</p>
-          <ul>
-            <li>45 components at launch → 49 components after 12 months</li>
-            <li>2 teams contributing new components monthly</li>
-            <li>Component library downloads increased 300% as adoption grew</li>
-            <li>System became model for other cross-functional initiatives</li>
-          </ul>
-
-          <h2>Design System Principles in Action</h2>
-          <h3>What Makes This System Work</h3>
-          <ol>
-            <li><strong>Flexible Architecture</strong> — Components adapt to product needs while maintaining consistency. The override system provides 80% of customization needs without breaking the design language.</li>
-            <li><strong>Documentation as Design</strong> — Every component includes the "why" behind design decisions. This prevents regression and builds shared understanding across teams.</li>
-            <li><strong>Progressive Enhancement</strong> — Basic functionality works everywhere. Teams can enhance based on their technical capabilities and user needs.</li>
-            <li><strong>Accessibility Baked In</strong> — WCAG compliance isn't optional, it's built into every component from the start. Color, typography and interaction design all meet AA standards.</li>
-            <li><strong>Living System</strong> — The Design System evolves with product needs through clear contribution processes and governance. It's not a static artifact but a collaborative practice.</li>
-          </ol>
-
-          <h3>Key Learnings</h3>
-          <ul>
-            <li><strong>Design with Constraints:</strong> Understanding technical limitations early prevented costly rework. The best designs are feasible designs.</li>
-            <li><strong>Document Decisions:</strong> Recording the "why" behind design choices proved as valuable as the designs themselves. Context prevents future mistakes.</li>
-            <li><strong>System Thinking:</strong> Every component affects the whole system. Small inconsistencies compound into large problems at scale.</li>
-            <li><strong>Collaboration Creates Buy-in:</strong> Involving teams in design decisions created ownership and smoother adoption than mandating top-down standards.</li>
-          </ul>
-
-          <h2>Conclusion</h2>
-          <p>This Design System demonstrates my approach to complex UX challenges:</p>
-          <ul>
-            <li>Systematic research</li>
-            <li>Strategic design thinking</li>
-            <li>Collaborative execution</li>
-            <li>Measurable impact</li>
-          </ul>
-          <p>By establishing shared standards across 7 applications, I eliminated duplicate work, improved user experience consistency, and enabled the organization to scale efficiently.</p>
-          <p>The system's continued evolution and adoption beyond its original scope validates the foundational architecture and governance model, proof that thoughtful systems design creates lasting value.</p>
+          <p>The Design System kept evolving after launch, growing from 45 to 49 components in 12 months, with two teams contributing new components monthly and library downloads up 300% as adoption spread. It became the model other cross-functional initiatives followed.</p>
 
           <h2>Creating a Figma Component</h2>
-          <p>Figma is an excellent platform for creating and managing the components that make up a Design System. While Figma itself isn't a Design System, it serves as a powerful tool that enables teams to build, organize, and maintain one effectively. Figma allows for:</p>
-          <ul>
-            <li><strong>Streamlined Collaboration:</strong> Figma's real-time collaboration allows multiple designers, developers and stakeholders to work simultaneously on the Design System, fostering efficient communication and feedback loops.</li>
-            <li><strong>Component Libraries and Style Management:</strong> Create, organize and reuse design components (buttons, forms, etc.) and styles (colors, fonts, spacing) across projects, ensuring consistency and reducing design time.</li>
-            <li><strong>Version Control and History:</strong> Track changes, iterate on components and revert to previous versions easily, maintaining transparency and facilitating collaboration.</li>
-            <li><strong>Easy Handoff and Development:</strong> Figma generates code snippets and asset exports for developers, enabling smooth hand-off and accelerating development.</li>
-          </ul>
           <p>Figma allows designers to create components, such as buttons, that can be customized through selectable overrides. During this phase, I collaborated with two other designers to completely rebuild all components within a new Figma component library. We included a full range of style options, enabling teams to easily customize components to fit the specific needs of their applications.</p>
           <p>Below is an example of the text field component, along with the available overrides:</p>
 
@@ -236,11 +97,14 @@
               <figcaption>Text field overrides</figcaption>
             </figure>
           </div>
-
-          <h2>Collaborating with Development to Bring the Design System to Life</h2>
-          <p>Once all the components were rebuilt in Figma, it was time to bring the development teams into the process. Our Design System combined customized MUI components with fully custom-built components tailored to our organization's needs. We partnered closely with the developers to ensure that all MUI-based components were styled and functioned according to spec. We also collaborated with them to build and refine the custom components to maintain consistency with the design standards.</p>
-          <p>By the end of the process, we had a fully developed library of coded components that engineers could easily integrate into their projects.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__inner wrap case-cta">
+        <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>
 

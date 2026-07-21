@@ -27,289 +27,53 @@
     <section class="section">
       <div class="section__inner wrap">
         <div class="prose">
-          <h2>The Design Challenge</h2>
-          <p>Design a simple workout discovery platform that solves the "feature bloat" problem plaguing existing fitness apps, making it easy for casual runners to find and contribute workouts.</p>
+          <h2>The Challenge</h2>
+          <p>As a coach for a 15-person running club, I kept watching members get overwhelmed by fitness apps built for serious athletes — dozens of features upfront, dense menus, no easy way to just find or share a simple workout — in a global running app market worth $1.2B+ and growing 14.2% annually. The opportunity was a focused tool that does one thing well: help runners quickly discover workouts and easily share their favorites.</p>
           <p><strong>Project Context:</strong> Personal design exploration &nbsp;|&nbsp; <strong>Duration:</strong> 2 months &nbsp;|&nbsp; <strong>Role:</strong> Solo UX designer</p>
 
-          <h2>The Challenge</h2>
-          <p>As a coach for a 15-person running club, I observed members consistently frustrated with existing fitness apps. They wanted simple workout ideas but were overwhelmed by feature-heavy platforms designed for serious athletes. Through conversations with club members, three core problems emerged:</p>
-          <p><strong>Problem 1: Cognitive Overload.</strong> Existing apps presented dozens of features upfront, training plans, nutrition tracking, social feeds, gear recommendations, when users just wanted to find a simple 30-minute run workout.</p>
-          <p><strong>Problem 2: Discovery Friction.</strong> Finding a suitable workout required navigating complex menus, understanding fitness jargon, and filtering through options designed for marathon training when someone just wanted an easy Tuesday run.</p>
-          <p><strong>Problem 3: Contribution Barriers.</strong> Experienced runners wanted to share their favorite workouts with the community, but existing platforms either didn't allow user contributions or required lengthy account creation and complex publishing flows.</p>
-          <p><strong>Design Opportunity:</strong> Create a focused tool that does one thing exceptionally well: help runners quickly discover workouts and easily share their favorites.</p>
-
           <h2>My Approach</h2>
-          <h3>User Research &amp; Insights</h3>
-          <p>I conducted informal interviews with 3 runners from my club and surveyed 5 members to understand their needs and frustrations.</p>
+          <p>I ran informal interviews with 3 club members and surveyed 5 more. Three things stood out: casual runners wanted simplicity over features, they trusted a workout more when they knew who made it and why, and they wanted 3-4 quick filters, not an exhaustive search form.</p>
 
-          <h4>Key Findings:</h4>
-          <p><strong>Finding 1: Simplicity Over Features.</strong> When asked what they wanted in a running app, users said "just show me workouts I can do today." Complex features like training plans, performance analytics, and social feeds were actively unwanted by casual runners.<br><em>Design Implication:</em> Resist feature creep. Default to browsing workouts, not on-boarding flows or feature explanations.</p>
-          <p><strong>Finding 2: Trust in Community Over Algorithms.</strong> Users trusted recommendations from "someone like me" (another casual runner) more than generic algorithm suggestions. They wanted to know WHO created a workout and WHY.<br><em>Design Implication:</em> Make contributor identity and workout context prominent, not hidden metadata.</p>
-          <p><strong>Finding 3: Quick Filtering, Not Extensive Search.</strong> Users wanted to narrow options fast (distance, difficulty, type) but got frustrated by extensive filter forms. The sweet spot was 3-4 filters maximum.<br><em>Design Implication:</em> Design filtering as progressive refinement, not upfront decision-making.</p>
-
-          <h3>Persona Development</h3>
-          <p>Based on research, I identified three user types that informed design priorities:</p>
-          <p><strong>Primary: The New/Comeback Runner</strong> (Focus: 60% of design effort)</p>
-          <ul>
-            <li>New running or returning to running after life break</li>
-            <li>Needs: Confidence-building, clear difficulty ratings, achievable workouts</li>
-            <li>Design priority: Safety-first language, beginner-friendly defaults</li>
-          </ul>
-          <p><strong>Secondary: The Social Runner</strong> (Focus: 25% of design effort)</p>
-          <ul>
-            <li>Runs for community connection</li>
-            <li>Needs: Peer recommendations, contributor transparency</li>
-            <li>Design priority: Trust signals, social proof</li>
-          </ul>
-          <p><strong>Contributor: The Experienced Amateur</strong> (Focus: 15% of design effort, high impact)</p>
-          <ul>
-            <li>Wants to share knowledge easily</li>
-            <li>Needs: Dead-simple publishing, immediate gratification</li>
-            <li>Design priority: Sub-5-minute contribution flow</li>
-          </ul>
+          <p>That research pointed to three user types: the new or comeback runner who needs confidence-building, beginner-friendly defaults; the social runner who trusts peer recommendations over algorithms; and the experienced contributor who wants to share knowledge through a dead-simple, sub-5-minute publishing flow.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/9f0bb41d-71bf-4937-9ac8-a0cddb24c7ed/personas.png?format=1500w" alt="Three user personas">
           </figure>
 
-          <h3>Key Design Decisions</h3>
+          <p>The biggest early decision was browse-first entry: no login required to view or filter workouts, with account creation only needed to save or contribute. That got 3 of 3 test users browsing workouts within 30 seconds, versus 2+ minutes of onboarding on competitor apps.</p>
 
-          <h4>Decision 1: Browse-First Entry, Not On-boarding</h4>
-          <p><strong>Problem:</strong> Users wanted immediate access to workouts, not account creation or preference settings.</p>
-          <p><strong>Solution:</strong> Default landing experience shows browsable workout library immediately. No login required to view or filter. Contribution and saving features progressively disclosed after engagement.</p>
-          <p><strong>Design Details:</strong></p>
-          <ul>
-            <li>Homepage shows featured workouts above the fold</li>
-            <li>Filter chips prominently placed (Distance, Difficulty, Type)</li>
-            <li>"Contribute Workout" button visible but secondary in hierarchy</li>
-            <li>Account creation only required for saving favorites or contributing</li>
-          </ul>
-          <p><strong>Rationale:</strong> Reduce friction to value. Let users prove utility to themselves before asking for commitment.</p>
-          <p><strong>Result:</strong> Testing showed 3 of 3 users successfully browsed workouts within 30 seconds, compared to competitor apps where users spent 2+ minutes in on-boarding.</p>
+          <p>Early testing also showed users bouncing between keyword search and filters, unsure which to use, so I merged them into one unified search with filter chips underneath. That cut discovery time from 3:15 to 1:45 minutes, a 45% improvement.</p>
 
-          <h4>Decision 2: Unified Search with Smart Filtering</h4>
-          <p><strong>Problem:</strong> Early testing revealed users were confused about when to use keyword search vs. filters. 2 of 3 users tried keyword search first, then abandoned it for filters.</p>
-          <p><strong>Initial Design:</strong> Separate search bar and filter panel<br><strong>Iteration:</strong> Combined into intelligent unified search with filter chips</p>
-          <p><strong>How It Works:</strong></p>
-          <ul>
-            <li>Single search bar accepts both keywords and natural language</li>
-            <li>Filter chips appear below search (Distance, Difficulty, Type, Duration)</li>
-            <li>Selecting chip immediately filters results</li>
-            <li>Search keywords work across workout titles and descriptions</li>
-            <li>"Clear all" resets to full library view</li>
-          </ul>
-          <p><strong>Rationale:</strong> Users think in natural language, not interface patterns. "Show me easy 5k workouts" should work whether typed or clicked.</p>
-          <p><strong>Result:</strong> Discovery time reduced from 3:15 minutes to 1:45 minutes average (45% improvement).</p>
+          <p>Every AI recommendation carries an explicit "Recommended because:" explanation instead of a black-box suggestion, so users understand and trust the system rather than feeling manipulated by an invisible algorithm.</p>
 
-          <h4>Decision 3: AI Transparency Through Explicit Explanations</h4>
-          <p><strong>Problem:</strong> When AI recommended workouts, users asked "why this one?" Opaque algorithms eroded trust.</p>
-          <p><strong>Solution:</strong> Every AI recommendation includes explicit "Recommended because:" explanation showing matching criteria.</p>
-          <p><strong>Design Examples:</strong></p>
-          <ul>
-            <li>"Recommended because: Matches your 5K distance preference and beginner difficulty"</li>
-            <li>"Recommended because: Similar to 'Tuesday Easy Run' you saved"</li>
-            <li>"Recommended because: Popular with other comeback runners"</li>
-          </ul>
-          <p><strong>Visual Treatment:</strong></p>
-          <ul>
-            <li>Recommendations marked with subtle AI badge</li>
-            <li>Explanation text appears below workout title</li>
-            <li>Option to "Show me something else" if recommendation misses</li>
-          </ul>
-          <p><strong>Rationale:</strong> Transparency builds trust. Users should understand system logic, not feel manipulated by invisible algorithms.</p>
-          <p><strong>AI Implementation Strategy:</strong></p>
-          <ul>
-            <li>Phase 1 (MVP): Rule-based matching on explicit filters</li>
-            <li>Phase 2: Preference learning from save/view behaviors</li>
-            <li>Phase 3: Intelligent coaching based on progression patterns</li>
-          </ul>
-          <p><strong>Result:</strong> Users consistently understood why workouts were suggested and felt in control of recommendations.</p>
-
-          <h4>Decision 4: Single-Page Contribution Flow with Auto-Save</h4>
-          <p><strong>Problem:</strong> Initial wizard-style flow (Step 1: Details, Step 2: Description, Step 3: Submit) caused users to go back repeatedly to edit previous steps.</p>
-          <p><strong>Solution:</strong> Changed from multi-step wizard to single-page form with auto-save.</p>
-          <p><strong>Design Details:</strong></p>
-          <ul>
-            <li>All fields visible on one scrollable page</li>
-            <li>Auto-save to drafts every 30 seconds</li>
-            <li>Preview panel shows live workout card as user types</li>
-            <li>"Publish" button only enabled when required fields complete</li>
-            <li>Exit confirmation if unsaved changes exist</li>
-          </ul>
-          <p><strong>Rationale:</strong> Contributors need flexibility to iterate, not forced linearity. Single-page form accommodates non-linear thinking.</p>
-          <p><strong>Result:</strong> Contribution time reduced from 8 minutes to 4 minutes average. User feedback: "Finally, an app that doesn't make me think about the flow."</p>
-
-          <h4>Decision 5: Clear Difficulty Communication</h4>
-          <p><strong>Problem:</strong> "Beginner," "Intermediate," "Advanced" meant different things to different people. One person's easy run is another's interval workout.</p>
-          <p><strong>Solution:</strong> Multi-signal difficulty system combining label, icon, and description.</p>
-          <p><strong>Design Implementation:</strong></p>
-          <ul>
-            <li>Difficulty badge with color coding (Green = Easy, Yellow = Moderate, Red = Hard)</li>
-            <li>Icon showing effort level (1-3 running figures)</li>
-            <li>Explicit description: "Easy: Conversational pace, low effort"</li>
-            <li>Workout cards show expected pace range (e.g., "9-11 min/mile")</li>
-          </ul>
-          <p><strong>Rationale:</strong> Combine subjective labels with objective descriptors so users self-select appropriately regardless of fitness level.</p>
-          <p><strong>Result:</strong> Users accurately selected workouts matching their ability 95% of the time in testing (up from 60% with label-only approach).</p>
-
-          <p><a href="https://elle-steiner.squarespace.com/ai-run-app-prd" target="_blank" rel="noopener">View Full PRD</a></p>
-
-          <figure class="case-image">
-            <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/c0418542-408a-40f8-985b-0762679daadc/PRD.png?format=1500w" alt="Product requirements document excerpt">
-          </figure>
+          <p>Two more changes rounded things out: a multi-signal difficulty system (label + icon + pace range) that got users choosing the right workout 95% of the time, up from 60%, and a single-page contribution form with autosave that cut publishing time from 8 minutes to 4.</p>
 
           <h2>Design Solution</h2>
-          <h3>Information Architecture</h3>
-          <p>I organized the app around three core sections:</p>
+          <p>The app is organized around three views: Discover for browsing and filtering the library, My Workouts for saved favorites and history, and Contribute for publishing and managing your own workouts, with a bottom tab bar on mobile and top navigation on desktop.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/ddeb6212-c5ea-4ef0-bc14-95c21e4f3fa0/flows.png?format=1500w" alt="Information architecture and flows">
           </figure>
 
-          <p><strong>1. Discover (Primary View)</strong></p>
-          <ul>
-            <li>Browse workout library</li>
-            <li>Filter by distance, difficulty, type, duration</li>
-            <li>AI recommendations based on selections</li>
-            <li>Featured community contributions</li>
-          </ul>
-          <p><strong>2. My Workouts (Secondary View)</strong></p>
-          <ul>
-            <li>Saved favorites</li>
-            <li>Recently viewed</li>
-            <li>Personal workout history</li>
-          </ul>
-          <p><strong>3. Contribute (Tertiary View)</strong></p>
-          <ul>
-            <li>Create new workout</li>
-            <li>Edit contributed workouts</li>
-            <li>View contribution stats</li>
-          </ul>
-          <p><strong>Navigation Pattern:</strong> Bottom tab bar (mobile) / Top navigation (desktop) with Discover as default.</p>
-
-          <h3>Workout Card Design</h3>
-          <p>Each workout card displays essential information at a glance:</p>
-          <p><strong>Primary Information:</strong></p>
-          <ul>
-            <li>Workout title (user-created, descriptive)</li>
-            <li>Distance and difficulty badges</li>
-            <li>Contributor name with profile icon</li>
-            <li>Brief description (2-3 sentences)</li>
-          </ul>
-          <p><strong>Secondary Information (on tap/click):</strong></p>
-          <ul>
-            <li>Detailed description</li>
-            <li>Workout structure/intervals</li>
-            <li>Target pace range</li>
-            <li>Creator notes and tips</li>
-            <li>Save and share actions</li>
-          </ul>
-          <p><strong>Visual Hierarchy:</strong></p>
-          <ul>
-            <li>Title: Bold, 18px</li>
-            <li>Badges: Color-coded, prominent placement</li>
-            <li>Description: 14px, gray, 2-line clamp with "Read more"</li>
-          </ul>
+          <p>Each workout card leads with title, distance, difficulty, and contributor identity, with more detail available on tap.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/e2a0a666-2b35-4db5-892e-5958615644e7/features.png?format=1500w" alt="Workout card feature breakdown">
           </figure>
 
-          <h3>AI Recommendation UI</h3>
-          <p>AI suggestions appear in dedicated section below filters:</p>
-          <p><strong>Visual Treatment:</strong></p>
-          <ul>
-            <li>Subtle blue badge: "AI Recommended"</li>
-            <li>Explicit explanation text</li>
-            <li>"Not interested" action to refine</li>
-            <li>3 recommendations maximum (avoid overwhelming)</li>
-          </ul>
-          <p><strong>Transparency Mechanism:</strong></p>
-          <ul>
-            <li>Users can view and edit preferences</li>
-            <li>Clear "Why am I seeing this?" link</li>
-            <li>Option to disable AI recommendations entirely</li>
-          </ul>
+          <p>AI recommendations sit in their own section below the filters, capped at three at a time, each one carrying its "Recommended because" explanation and a one-click way to see something else instead.</p>
 
           <figure class="case-image">
             <img src="https://images.squarespace-cdn.com/content/v1/68091e9ce92887229a6f61ad/b2143a82-ff20-4b6a-8127-c3829067a7f4/features.png?format=1500w" alt="AI recommendation UI treatment">
           </figure>
 
           <h2>Testing &amp; Iteration</h2>
-          <p>I tested the prototype with 5 runners (mix of club members and friends) in moderated sessions.</p>
-
-          <h3>Round 1: Initial Prototype</h3>
-          <p><strong>Task Success Rates:</strong></p>
-          <ul>
-            <li>Find a 5K workout: 3/5 (75%)</li>
-            <li>Save a favorite: 2/5 (62%)</li>
-            <li>Create a workout: 2/5 (50%)</li>
-            <li>Understand AI recommendation: 4/5 (87%)</li>
-          </ul>
-          <p><strong>Key Issues Identified:</strong></p>
-          <p><strong>Issue 1: Search vs. Filter Confusion.</strong> 3 of 5 users tried keyword search first, then switched to filters. The dual-entry pattern created cognitive overhead.</p>
-          <p><strong>Changes Made:</strong></p>
-          <ul>
-            <li>Unified search and filter into single interaction</li>
-            <li>Made filter chips more prominent</li>
-            <li>Removed separate search bar</li>
-          </ul>
-          <p><strong>Issue 2: Contribution Flow Friction.</strong> Contributors went back and forth between steps, frustrated by wizard constraints.</p>
-          <p><strong>Changes Made:</strong></p>
-          <ul>
-            <li>Replaced wizard with single-page form</li>
-            <li>Added auto-save functionality</li>
-            <li>Included live preview panel</li>
-          </ul>
-          <p><strong>Issue 3: "Now What?" After Creating Workout.</strong> After publishing, users were returned to library with no confirmation of success.</p>
-          <p><strong>Changes Made:</strong></p>
-          <ul>
-            <li>Added success confirmation screen</li>
-            <li>Included option to share or view published workout</li>
-            <li>Showed "You created this!" badge on workout card</li>
-          </ul>
-
-          <h3>Round 2: Revised Prototype</h3>
-          <p><strong>Task Success Rates:</strong></p>
-          <ul>
-            <li>Find a 5K workout: 5/5 (100%)</li>
-            <li>Save a favorite: 5/5 (100%)</li>
-            <li>Create a workout: 4/5 (87%)</li>
-            <li>Understand AI recommendation: 5/5 (100%)</li>
-          </ul>
-          <p><strong>Remaining Issue:</strong> One user struggled with contribution form because they didn't understand "intervals" field.</p>
-          <p><strong>Final Change:</strong></p>
-          <ul>
-            <li>Added contextual help tooltips for advanced fields</li>
-            <li>Made "intervals" field optional with default "Steady pace"</li>
-            <li>Included example workouts for reference</li>
-          </ul>
-
-          <h3>Final Validation</h3>
-          <ul>
-            <li>Task Success Rates: 100% across all core flows</li>
-            <li>Average Discovery Time: 1:45 minutes (down from 3:15)</li>
-            <li>Average Contribution Time: 4 minutes (down from 8)</li>
-            <li>User Satisfaction: 5/5 rated "easy to use"</li>
-          </ul>
+          <p>I tested the prototype with 5 runners across two rounds. The sharpest issue in round one was the same search-vs-filter confusion from earlier research — users tried keyword search first, then abandoned it for filters — which confirmed the unified search decision was worth doubling down on. I also added a confirmation screen after publishing, since round-one testers had no idea their workout had actually gone live. A second round validated the fixes across every core flow.</p>
 
           <p><a href="https://sweat-trio-68724057.figma.site/" target="_blank" rel="noopener">View the Prototype</a></p>
 
           <h2>Design Outcomes</h2>
-          <h3>Validated Through Testing</h3>
-          <p><strong>Usability Improvements:</strong></p>
-          <ul>
-            <li>100% task completion rate (up from 50-75% in early tests)</li>
-            <li>45% faster workout discovery (3:15 → 1:45 minutes)</li>
-            <li>50% faster workout contribution (8 → 4 minutes)</li>
-            <li>Zero critical usability issues in final testing</li>
-          </ul>
-          <p><strong>User Satisfaction:</strong></p>
-          <ul>
-            <li>5/5 users rated experience "easy to use"</li>
-            <li>4/5 said they would use this over existing apps</li>
-            <li>3/5 expressed interest in contributing workouts</li>
-          </ul>
+          <p>Final testing validated the redesign: 100% task completion across all core flows, 45% faster workout discovery, 50% faster contribution, and a 5/5 "easy to use" rating from testers.</p>
 
           <h3>Design Patterns Created</h3>
           <p><strong>Reusable Solutions:</strong></p>
@@ -321,11 +85,8 @@
           </ul>
 
           <h2>Designing with AI</h2>
-          <p><strong>1. AI as Enhancement, Not Requirement.</strong> The app works perfectly well without AI recommendations. By making AI an optional enhancement rather than core feature, I reduced technical complexity while maintaining user value.</p>
-          <p><strong>2. Transparency Builds Trust.</strong> Users don't inherently distrust AI, they distrust opacity. Explicit explanations of "why" eliminated skepticism and increased engagement with recommendations.</p>
-          <p><strong>3. Progressive Complexity.</strong> Starting with simple rule-based recommendations (if user selects "5K" filter, recommend 5K workouts) established baseline value. More sophisticated learning can layer on top without starting from scratch.</p>
-          <p><strong>4. AI Tools Accelerate Exploration, Not Replace Craft.</strong> I used Visily AI and Figma Make to generate initial concepts quickly, but spent equal time refining, testing, and iterating. Tools accelerate exploration; designers add craft.</p>
-          <p>The AI integration strategy particularly validated the importance of transparency in building user trust. Rather than hiding algorithmic recommendations behind opaque "For You" labels, explicit explanations helped users understand and engage with AI suggestions.</p>
+          <p><strong>AI as Enhancement, Not Requirement.</strong> The app works perfectly well without AI recommendations — I started with simple rule-based matching and left room to layer smarter learning on top, rather than forcing complexity in from day one. I used AI tools like Visily and Figma Make to move fast on initial concepts, but the craft still came from the refinement and testing after.</p>
+          <p><strong>Transparency Builds Trust.</strong> Users don't inherently distrust AI, they distrust opacity — explicit "why" explanations eliminated skepticism and got people actually engaging with recommendations instead of ignoring them.</p>
         </div>
 
         <h2 class="section__heading">Running App Screens</h2>
@@ -355,6 +116,13 @@
             <figcaption>Mobile Add a Workout</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__inner wrap case-cta">
+        <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>
 
