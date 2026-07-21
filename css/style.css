@@ -843,6 +843,28 @@ button {
   color: var(--color-text);
 }
 
+/* Inline before/after mini bar charts */
+.mini-chart {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin-top: 0.6rem;
+}
+
+.stat-card .mini-chart {
+  margin-top: 0.75rem;
+}
+
+/* Inline before/after flow and state diagrams */
+.mini-diagram {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  margin: 1rem 0;
+}
+
 /* Image galleries within case studies */
 .case-image {
   margin: 1.5rem 0;
@@ -1058,6 +1080,70 @@ button {
   .contact-layout {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------------------------------------------
+   Contact form
+--------------------------------------------- */
+.contact-form {
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.contact-form__field {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form__field label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-annotation);
+  margin-bottom: 0.4rem;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 1px solid var(--color-hairline);
+  border-radius: 4px;
+  padding: 0.65rem 0.8rem;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.contact-form__field textarea {
+  resize: vertical;
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form__status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.contact-form__status.is-success {
+  color: var(--color-accent);
+}
+
+.contact-form__status.is-error {
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 /* ---------------------------------------------

@@ -59,6 +59,49 @@
 
           <p>The original structure split Dashboard, Assignments, Materials, Grades, and Resources into five siloed sections nested 4-5 levels deep. I rebuilt it around action rather than category — Dashboard, Your Week, In Progress, Completed, and Course Materials — with grades and materials surfaced contextually inside each assignment instead of hidden in their own tabs, cutting navigation down to 2-3 levels.</p>
 
+          <svg class="mini-diagram" viewBox="0 0 460 98" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information architecture before: Dashboard, Assignments, Materials, Grades, Resources, nested 4 to 5 levels deep. After: Dashboard, Your Week, In Progress, Completed, Course Materials, 2 to 3 levels deep.">
+            <defs>
+              <marker id="arrow-gray-db" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--color-hairline)"/>
+              </marker>
+              <marker id="arrow-accent-db" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--color-accent)"/>
+              </marker>
+            </defs>
+
+            <text x="0" y="9" font-family="Poppins, sans-serif" font-size="8.5" letter-spacing="0.04em" fill="var(--color-annotation)">BEFORE — 4-5 LEVELS DEEP</text>
+            <rect x="0" y="16" width="66" height="20" rx="2" fill="none" stroke="var(--color-hairline)"/>
+            <text x="33" y="29" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Dashboard</text>
+            <line x1="66" y1="26" x2="80" y2="26" stroke="var(--color-hairline)" marker-end="url(#arrow-gray-db)"/>
+            <rect x="82" y="16" width="80" height="20" rx="2" fill="none" stroke="var(--color-hairline)"/>
+            <text x="122" y="29" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Assignments</text>
+            <line x1="162" y1="26" x2="176" y2="26" stroke="var(--color-hairline)" marker-end="url(#arrow-gray-db)"/>
+            <rect x="178" y="16" width="66" height="20" rx="2" fill="none" stroke="var(--color-hairline)"/>
+            <text x="211" y="29" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Materials</text>
+            <line x1="244" y1="26" x2="258" y2="26" stroke="var(--color-hairline)" marker-end="url(#arrow-gray-db)"/>
+            <rect x="260" y="16" width="52" height="20" rx="2" fill="none" stroke="var(--color-hairline)"/>
+            <text x="286" y="29" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Grades</text>
+            <line x1="312" y1="26" x2="326" y2="26" stroke="var(--color-hairline)" marker-end="url(#arrow-gray-db)"/>
+            <rect x="328" y="16" width="70" height="20" rx="2" fill="none" stroke="var(--color-hairline)"/>
+            <text x="363" y="29" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Resources</text>
+
+            <text x="0" y="64" font-family="Poppins, sans-serif" font-size="8.5" letter-spacing="0.04em" fill="var(--color-annotation)">AFTER — 2-3 LEVELS</text>
+            <rect x="0" y="71" width="66" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="33" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Dashboard</text>
+            <line x1="66" y1="81" x2="80" y2="81" stroke="var(--color-accent)" marker-end="url(#arrow-accent-db)"/>
+            <rect x="82" y="71" width="70" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="117" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Your Week</text>
+            <line x1="152" y1="81" x2="166" y2="81" stroke="var(--color-accent)" marker-end="url(#arrow-accent-db)"/>
+            <rect x="168" y="71" width="76" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="206" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">In Progress</text>
+            <line x1="244" y1="81" x2="258" y2="81" stroke="var(--color-accent)" marker-end="url(#arrow-accent-db)"/>
+            <rect x="260" y="71" width="70" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="295" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Completed</text>
+            <line x1="330" y1="81" x2="344" y2="81" stroke="var(--color-accent)" marker-end="url(#arrow-accent-db)"/>
+            <rect x="346" y="71" width="104" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="398" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Course Materials</text>
+          </svg>
+
           <h2>Testing &amp; Iterations</h2>
           <p>I ran two rounds of moderated usability testing with 8 students. The first round surfaced three issues: an easy-to-miss "View All" link, unclear required-vs-optional materials, and performance indicators that read as accusatory — students with lower grades found the red color coding stressful rather than motivating. I softened the palette, added encouraging messaging regardless of performance, and emphasized trend over absolute grade; the second round validated the fixes across every core task.</p>
 
@@ -69,6 +112,20 @@
           </figure>
 
           <p>Task completion for finding the next assignment went from 60% to 95%. Materials access rose from 35% to 68% of students, on-time submission from 75% to 88%, and mobile completion from 45% to 72%. Overall satisfaction moved from 3.2/5 to 4.5/5.</p>
+
+          <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Task completion: 60% to 95%">
+            <rect x="0" y="12" width="150" height="10" fill="var(--color-accent)"/>
+            <rect x="0" y="12" width="95" height="10" fill="var(--color-hairline)"/>
+            <text x="95" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-annotation)">60%</text>
+            <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">95%</text>
+          </svg>
+
+          <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobile completion: 45% to 72%">
+            <rect x="0" y="12" width="150" height="10" fill="var(--color-accent)"/>
+            <rect x="0" y="12" width="94" height="10" fill="var(--color-hairline)"/>
+            <text x="94" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-annotation)">45%</text>
+            <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">72%</text>
+          </svg>
 
           <p class="pull-quote">"I used to feel lost every time I logged in. Now I know exactly what to do."</p>
           <p class="pull-quote">"I love that I can see I'm on track without clicking around forever."</p>

@@ -66,6 +66,40 @@
           <h3>Phase 2: Collaborative Design</h3>
           <p>I partnered with the dev team from day one to map backend constraints, then tested three design directions with 8 warfighters. The winner — icon + color + text label — hit 94% accuracy versus 62% for icon-only, so I built it as a three-tier progressive-enhancement system (Basic, Enhanced, Advanced) letting every app integrate at whatever level its backend supported, rather than forcing a one-size-fits-all build.</p>
 
+          <svg class="mini-diagram" viewBox="0 0 260 98" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before: 7 apps with inconsistent or missing connection indicators, no shared pattern. After: one shared component with a three-tier flow, Basic to Enhanced to Advanced.">
+            <defs>
+              <marker id="arrow-accent-conn" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--color-accent)"/>
+              </marker>
+            </defs>
+
+            <text x="0" y="9" font-family="Poppins, sans-serif" font-size="8.5" letter-spacing="0.04em" fill="var(--color-annotation)">BEFORE — 7 APPS, NO SHARED PATTERN</text>
+            <rect x="2" y="18" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="26" y="24" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="52" y="16" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="78" y="26" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="104" y="19" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="130" y="23" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+            <rect x="156" y="17" width="14" height="14" fill="none" stroke="var(--color-hairline)"/>
+
+            <text x="0" y="62" font-family="Poppins, sans-serif" font-size="8.5" letter-spacing="0.04em" fill="var(--color-annotation)">AFTER — ONE SHARED FLOW</text>
+            <rect x="0" y="69" width="52" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="26" y="82" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Basic</text>
+            <line x1="52" y1="79" x2="66" y2="79" stroke="var(--color-accent)" marker-end="url(#arrow-accent-conn)"/>
+            <rect x="68" y="69" width="76" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="106" y="82" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Enhanced</text>
+            <line x1="144" y1="79" x2="158" y2="79" stroke="var(--color-accent)" marker-end="url(#arrow-accent-conn)"/>
+            <rect x="160" y="69" width="76" height="20" rx="2" fill="none" stroke="var(--color-accent)"/>
+            <text x="198" y="82" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Advanced</text>
+          </svg>
+
+          <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recognition accuracy: 62% for icon-only to 94% for icon plus color plus text">
+            <rect x="0" y="12" width="150" height="10" fill="var(--color-accent)"/>
+            <rect x="0" y="12" width="99" height="10" fill="var(--color-hairline)"/>
+            <text x="99" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-annotation)">62%</text>
+            <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">94%</text>
+          </svg>
+
           <h3>Phase 3: Development Partnership</h3>
           <p>I documented the component's API, visual specs, interaction behavior, and edge cases, then held daily office hours during the 3-month rollout to support all 7 teams. When one team's backend couldn't distinguish "poor connection" from "timeout," I combined those states with clearer messaging rather than forcing a technical fix — between the documentation and real-time support, teams integrated the component in an average of 2 days versus the previous 2-week timeline.</p>
 
@@ -73,8 +107,29 @@
           <h3>Component Architecture</h3>
           <p>Three connection states, always differentiated by color, icon, and text label together, never color alone: Connected (green) tells users their data is live; Partially Connected (yellow, with a subtle reconnecting animation) tells them the app is retrying and showing cached data; and Critical Connection (red, with a last-synced timestamp) tells them they're fully offline.</p>
 
+          <svg class="mini-diagram" viewBox="0 0 260 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three connection states: Connected, data is live. Partially Connected, retrying with cached data. Critical Connection, fully offline.">
+            <circle cx="7" cy="9" r="5" fill="var(--color-accent)"/>
+            <text x="20" y="8" font-family="Poppins, sans-serif" font-size="9.5" fill="var(--color-ink)">Connected</text>
+            <text x="20" y="19" font-family="Poppins, sans-serif" font-size="8" fill="var(--color-annotation)">Data is live</text>
+
+            <circle cx="7" cy="39" r="5" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+            <text x="20" y="38" font-family="Poppins, sans-serif" font-size="9.5" fill="var(--color-ink)">Partially Connected</text>
+            <text x="20" y="49" font-family="Poppins, sans-serif" font-size="8" fill="var(--color-annotation)">Retrying, showing cached data</text>
+
+            <circle cx="7" cy="69" r="5" fill="none" stroke="var(--color-hairline)" stroke-width="1.5" stroke-dasharray="2,2"/>
+            <text x="20" y="68" font-family="Poppins, sans-serif" font-size="9.5" fill="var(--color-ink)">Critical Connection</text>
+            <text x="20" y="79" font-family="Poppins, sans-serif" font-size="8" fill="var(--color-annotation)">Fully offline</text>
+          </svg>
+
           <h3>Visual Design Decisions</h3>
           <p>I placed the indicator in the application header, top-right — testing showed 95% discoverability there versus 62% for footer placement. Color mapped to familiar mental models (green/yellow/red) but never carried meaning alone: every state paired a WCAG AA-compliant text label, verified with colorblind simulation, with a subtle pulse animation that drew attention only when the state actually changed.</p>
+
+          <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discoverability: 62% for footer placement to 95% for header placement">
+            <rect x="0" y="12" width="150" height="10" fill="var(--color-accent)"/>
+            <rect x="0" y="12" width="98" height="10" fill="var(--color-hairline)"/>
+            <text x="98" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-annotation)">62%</text>
+            <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">95%</text>
+          </svg>
 
           <h2>Collaboration &amp; Leadership</h2>
           <p>I led collaboration across all 7 product teams and mentored a junior designer on component variants for the next phase. Not every team prioritized integration at first, so I showed them their own support-ticket data, demoed the improved experience, and offered hands-on implementation support — that secured commitment from all 7 teams within 2 weeks.</p>

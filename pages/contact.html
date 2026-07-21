@@ -32,10 +32,36 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="section__inner wrap">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="contact-form__field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="contact-form__honeypot" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="contact-form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <div data-include="footer"></div>
 
   <script src="/js/include.js"></script>
+  <script src="/js/contact-form.js"></script>
 </body>
 </html>
