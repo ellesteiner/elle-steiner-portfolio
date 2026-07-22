@@ -206,7 +206,7 @@ button {
    (index.html only; case-study pages are untouched)
 --------------------------------------------- */
 .home-hero {
-  padding: 4rem var(--gutter) 3.5rem;
+  padding: 6rem var(--gutter) 4.5rem;
 }
 
 .home-hero__inner {
@@ -221,16 +221,16 @@ button {
 .home-hero__text h1 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(2.6rem, 1.85rem + 3.6vw, 4.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.9rem, 2rem + 4.5vw, 5.5rem);
+  line-height: 1.03;
   letter-spacing: -0.01em;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2.25rem;
 }
 
 .home-hero__subhead {
   font-size: 1.05rem;
   max-width: 44ch;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
   color: var(--color-annotation);
 }
 
@@ -324,41 +324,11 @@ button {
 /* ---------------------------------------------
    Expertise (design systems / people leadership)
 --------------------------------------------- */
-.expertise {
-  padding: 4rem var(--gutter);
-}
-
-.expertise__grid {
-  max-width: var(--max-width);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(2rem, 4vw, 3rem);
-}
-
-.expertise__col h3 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-}
-
-.expertise__col p {
-  color: var(--color-text);
-}
-
-@media (max-width: 800px) {
-  .expertise__grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
 /* ---------------------------------------------
    Capability blocks
 --------------------------------------------- */
 .capabilities {
-  padding: 4rem var(--gutter);
+  padding: 5.5rem var(--gutter);
 }
 
 .capabilities__grid {
@@ -366,34 +336,24 @@ button {
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(2rem, 4vw, 3rem);
-}
-
-.capabilities__grid--four {
-  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
 }
 
 .capability h3 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .capability p {
   color: var(--color-text);
 }
 
-@media (max-width: 1000px) {
-  .capabilities__grid--four {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 800px) {
   .capabilities__grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.75rem;
   }
 }
 
@@ -442,9 +402,12 @@ button {
   padding-top: 3rem;
 }
 
+.home-work-start .scrim-banner {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
 .project-card h4,
-.feature-row__text h3,
-.older-work__text h3 {
+.feature-row__text h3 {
   transition: color 0.15s ease;
 }
 
@@ -453,10 +416,6 @@ button {
 }
 
 .feature-row:hover .feature-row__text h3 {
-  color: var(--color-accent);
-}
-
-.older-work:hover .older-work__text h3 {
   color: var(--color-accent);
 }
 
@@ -596,6 +555,16 @@ button {
   max-width: 46ch;
 }
 
+@media (min-width: 801px) {
+  .feature-row--reverse .feature-row__image {
+    order: 2;
+  }
+
+  .feature-row--reverse .feature-row__text {
+    order: 1;
+  }
+}
+
 @media (max-width: 800px) {
   .feature-row {
     grid-template-columns: 1fr;
@@ -603,32 +572,6 @@ button {
 
   .feature-row__image {
     order: -1;
-  }
-}
-
-/* Older work (image + text) */
-.older-work {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
-}
-
-.older-work__image img {
-  border-radius: 4px;
-  width: 100%;
-  height: clamp(280px, 30vw, 420px);
-  object-fit: cover;
-}
-
-.older-work__text p {
-  margin: 1rem 0 1.5rem;
-  max-width: 44ch;
-}
-
-@media (max-width: 800px) {
-  .older-work {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -1158,6 +1101,18 @@ button {
   margin-top: 2rem;
 }
 
+.pre-footer-nav__label {
+  max-width: var(--max-width);
+  margin: 0 auto 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-annotation);
+  text-align: center;
+}
+
 .pre-footer-nav__inner {
   max-width: var(--max-width);
   margin-inline: auto;
@@ -1185,41 +1140,54 @@ button {
 }
 
 .site-footer {
-  border-top: 1px solid var(--color-light-gray);
-  padding: 2.5rem var(--gutter) 3rem;
+  background: var(--color-ink);
+  color: var(--color-light-gray);
+  padding: 3.5rem var(--gutter) 2rem;
 }
 
 .site-footer__inner {
   max-width: var(--max-width);
   margin-inline: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.site-footer__tagline {
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  max-width: 30ch;
-}
-
-.site-footer__columns {
-  display: flex;
-  gap: clamp(2rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 
 .site-footer__heading {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-annotation);
+  margin-bottom: 1rem;
 }
 
-.site-footer__column p {
-  color: var(--color-text);
+.site-footer__links li {
+  margin-bottom: 0.6rem;
 }
 
-.site-footer__column a:hover {
+.site-footer__links a {
+  color: var(--color-light-gray);
+}
+
+.site-footer__links a:hover {
+  color: var(--color-white);
   border-bottom: 1px solid currentColor;
+}
+
+.site-footer__bottom {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.8rem;
+  color: var(--color-annotation);
+}
+
+@media (max-width: 700px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
