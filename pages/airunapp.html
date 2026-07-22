@@ -21,7 +21,9 @@
     <div class="case-hero scrim-banner">
       <img src="/images/airunapp/run-hero.png" alt="">
       <div class="case-hero__content">
+        <!-- EDIT: Case title -->
         <h1 class="case-title">Run Workout App</h1>
+        <!-- EDIT: Case subtitle -->
         <p class="case-subtitle">Simplifying Workout Discovery for Community Runners</p>
       </div>
     </div>
@@ -29,52 +31,71 @@
     <section class="section">
       <div class="section__inner wrap">
         <div class="prose">
+          <!-- EDIT: Section heading - The Challenge -->
           <h2>The Challenge</h2>
+          <!-- EDIT: Challenge paragraph -->
           <p>As a coach for a 15-person running club, I kept watching members get overwhelmed by fitness apps built for serious athletes — dozens of features upfront, dense menus, no easy way to just find or share a simple workout — in a global running app market worth $1.2B+ and growing 14.2% annually. The opportunity was a focused tool that does one thing well: help runners quickly discover workouts and easily share their favorites.</p>
+          <!-- EDIT: Project context / role line -->
           <p><strong>Project Context:</strong> Personal design exploration &nbsp;|&nbsp; <strong>Duration:</strong> 2 months &nbsp;|&nbsp; <strong>Role:</strong> Solo UX designer</p>
 
+          <!-- EDIT: Section heading - My Approach -->
           <h2>My Approach</h2>
+          <!-- EDIT: Approach paragraph 1 -->
           <p>I ran informal interviews with 3 club members and surveyed 5 more. Three things stood out: casual runners wanted simplicity over features, they trusted a workout more when they knew who made it and why, and they wanted 3-4 quick filters, not an exhaustive search form.</p>
 
+          <!-- EDIT: Approach paragraph 2 - user types -->
           <p>That research pointed to three user types: the new or comeback runner who needs confidence-building, beginner-friendly defaults; the social runner who trusts peer recommendations over algorithms; and the experienced contributor who wants to share knowledge through a dead-simple, sub-5-minute publishing flow.</p>
 
           <figure class="case-image">
             <img src="/images/airunapp/personas.png" alt="Three user personas">
           </figure>
 
+          <!-- EDIT: Approach paragraph 3 - browse-first -->
           <p>The biggest early decision was browse-first entry: no login required to view or filter workouts, with account creation only needed to save or contribute. That got 3 of 3 test users browsing workouts within 30 seconds, versus 2+ minutes of onboarding on competitor apps.</p>
 
+          <!-- EDIT: Approach paragraph 4 - unified search -->
           <p>Early testing also showed users bouncing between keyword search and filters, unsure which to use, so I merged them into one unified search with filter chips underneath. That cut discovery time from 3:15 to 1:45 minutes, a 45% improvement.</p>
 
+          <!-- EDIT: Approach paragraph 5 - AI transparency -->
           <p>Every AI recommendation carries an explicit "Recommended because:" explanation instead of a black-box suggestion, so users understand and trust the system rather than feeling manipulated by an invisible algorithm.</p>
 
+          <!-- EDIT: Approach paragraph 6 - final changes -->
           <p>Two more changes rounded things out: a multi-signal difficulty system (label + icon + pace range) that got users choosing the right workout 95% of the time, up from 60%, and a single-page contribution form with autosave that cut publishing time from 8 minutes to 4.</p>
 
+          <!-- EDIT: Section heading - Design Solution -->
           <h2>Design Solution</h2>
+          <!-- EDIT: Design solution paragraph 1 -->
           <p>The app is organized around three views: Discover for browsing and filtering the library, My Workouts for saved favorites and history, and Contribute for publishing and managing your own workouts, with a bottom tab bar on mobile and top navigation on desktop.</p>
 
           <figure class="case-image">
             <img src="/images/airunapp/flows.png" alt="Information architecture and flows">
           </figure>
 
+          <!-- EDIT: Design solution paragraph 2 - workout card -->
           <p>Each workout card leads with title, distance, difficulty, and contributor identity, with more detail available on tap.</p>
 
           <figure class="case-image">
             <img src="/images/airunapp/features-workout-card.png" alt="Workout card feature breakdown">
           </figure>
 
+          <!-- EDIT: Design solution paragraph 3 - AI recommendations -->
           <p>AI recommendations sit in their own section below the filters, capped at three at a time, each one carrying its "Recommended because" explanation and a one-click way to see something else instead.</p>
 
           <figure class="case-image">
             <img src="/images/airunapp/features-ai-rec.png" alt="AI recommendation UI treatment">
           </figure>
 
+          <!-- EDIT: Section heading - Testing & Iteration -->
           <h2>Testing &amp; Iteration</h2>
+          <!-- EDIT: Testing paragraph -->
           <p>I tested the prototype with 5 runners across two rounds. The sharpest issue in round one was the same search-vs-filter confusion from earlier research — users tried keyword search first, then abandoned it for filters — which confirmed the unified search decision was worth doubling down on. I also added a confirmation screen after publishing, since round-one testers had no idea their workout had actually gone live. A second round validated the fixes across every core flow.</p>
 
+          <!-- EDIT: Prototype link -->
           <p><a href="https://sweat-trio-68724057.figma.site/" target="_blank" rel="noopener">View the Prototype</a></p>
 
+          <!-- EDIT: Section heading - Design Outcomes -->
           <h2>Design Outcomes</h2>
+          <!-- EDIT: Design outcomes paragraph -->
           <p>Final testing validated the redesign: 100% task completion across all core flows, 45% faster workout discovery, 50% faster contribution, and a 5/5 "easy to use" rating from testers.</p>
 
           <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discovery time: 3 minutes 15 seconds to 1 minute 45 seconds">
@@ -91,8 +112,11 @@
             <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">8 min</text>
           </svg>
 
+          <!-- EDIT: Subsection heading - Design Patterns Created -->
           <h3>Design Patterns Created</h3>
+          <!-- EDIT: Reusable solutions label -->
           <p><strong>Reusable Solutions:</strong></p>
+          <!-- EDIT: Reusable solutions list -->
           <ul>
             <li>Unified search + filter interaction pattern</li>
             <li>AI transparency explanation component</li>
@@ -100,35 +124,45 @@
             <li>Multi-signal difficulty communication system</li>
           </ul>
 
+          <!-- EDIT: Section heading - Designing with AI -->
           <h2>Designing with AI</h2>
+          <!-- EDIT: AI as enhancement paragraph -->
           <p><strong>AI as Enhancement, Not Requirement.</strong> The app works perfectly well without AI recommendations — I started with simple rule-based matching and left room to layer smarter learning on top, rather than forcing complexity in from day one. I used AI tools like Visily and Figma Make to move fast on initial concepts, but the craft still came from the refinement and testing after.</p>
+          <!-- EDIT: Transparency builds trust paragraph -->
           <p><strong>Transparency Builds Trust.</strong> Users don't inherently distrust AI, they distrust opacity — explicit "why" explanations eliminated skepticism and got people actually engaging with recommendations instead of ignoring them.</p>
         </div>
 
+        <!-- EDIT: Section heading - Running App Screens -->
         <h2 class="section__heading">Running App Screens</h2>
         <div class="case-gallery case-gallery--three">
           <figure>
             <img src="/images/airunapp/run-app-final.png" alt="">
+            <!-- EDIT: Gallery caption - library -->
             <figcaption>Run Coach App library</figcaption>
           </figure>
           <figure>
             <img src="/images/airunapp/run-app-card.png" alt="">
+            <!-- EDIT: Gallery caption - workout card -->
             <figcaption>Runring Workout Card</figcaption>
           </figure>
           <figure>
             <img src="/images/airunapp/run-app-add.png" alt="">
+            <!-- EDIT: Gallery caption - add a workout -->
             <figcaption>Add a Workout</figcaption>
           </figure>
           <figure>
             <img src="/images/airunapp/Run-app-mobile1.png" alt="">
+            <!-- EDIT: Gallery caption - mobile app -->
             <figcaption>Mobile Run Coach App</figcaption>
           </figure>
           <figure>
             <img src="/images/airunapp/Run-app-mobile2.png" alt="">
+            <!-- EDIT: Gallery caption - mobile workout card -->
             <figcaption>Mobile Run Workout Card</figcaption>
           </figure>
           <figure>
             <img src="/images/airunapp/Run-app-mobile3.png" alt="">
+            <!-- EDIT: Gallery caption - mobile add a workout -->
             <figcaption>Mobile Add a Workout</figcaption>
           </figure>
         </div>
@@ -137,7 +171,9 @@
 
     <section class="section">
       <div class="section__inner wrap case-cta">
+        <!-- EDIT: Closing CTA heading -->
         <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <!-- EDIT: Closing CTA button -->
         <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>

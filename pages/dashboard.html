@@ -21,44 +21,61 @@
     <div class="case-hero scrim-banner case-hero--dark">
       <img src="/images/dashboard/education-hero.png" alt="">
       <div class="case-hero__content">
+        <!-- EDIT: Case title -->
         <h1 class="case-title">Student Dashboard &amp; Course Screens</h1>
+        <!-- EDIT: Case subtitle -->
         <p class="case-subtitle">Reducing Cognitive Overload in Online Learning</p>
       </div>
     </div>
 
     <section class="section">
       <div class="section__inner wrap">
+        <!-- EDIT: Case meta (role/timeline/team) -->
         <p class="case-meta">Role: Lead Product Designer &nbsp;//&nbsp; Timeline: 6-9 months &nbsp;//&nbsp; Team: 1 PM, 3-4 engineers</p>
 
         <div class="prose">
+          <!-- EDIT: Section heading - The Challenge -->
           <h2>The Challenge</h2>
+          <!-- EDIT: Challenge paragraph -->
           <p>I designed a student-facing dashboard for Pearson's higher-ed platform that consolidates scattered course materials, assignments, and resources into one prioritized view that adapts to each student's progress. The existing dashboard showed every assignment at once regardless of due date, buried materials in separate sections from the assignments that referenced them, and gave every student an identical view with no sense of what mattered right now.</p>
 
           <figure class="case-image">
             <img src="/images/dashboard/Key-Problems.png" alt="Key problems identified">
           </figure>
 
+          <!-- EDIT: Pull quote - student feedback -->
           <p class="pull-quote">"I just want to see what's due this week, not everything for the entire semester."</p>
 
+          <!-- EDIT: Section heading - My Approach -->
           <h2>My Approach</h2>
+          <!-- EDIT: Subsection heading - Research -->
           <h3>Research</h3>
+          <!-- EDIT: Research paragraph -->
           <p>I interviewed 6 undergraduate students across different majors about how they navigated coursework. Three findings stood out: students wanted a prioritized view instead of a comprehensive list, they were losing focus jumping across 4 separate pages just to open one assigned reading, and many checked their grades obsessively because they had no reliable signal of where they stood.</p>
 
+          <!-- EDIT: Subsection heading - Progressive disclosure -->
           <h3>Progressive disclosure for assignments</h3>
+          <!-- EDIT: Progressive disclosure paragraph -->
           <p>Showing all 20-30 assignments at once made it hard to know where to start, so I redesigned the default view to surface only recent and upcoming work, color- and size-coded by priority, with the full list available behind a single expand action for anyone who needed it.</p>
 
+          <!-- EDIT: Subsection heading - Contextual material integration -->
           <h3>Contextual material integration</h3>
+          <!-- EDIT: Contextual integration paragraph -->
           <p>Materials lived in a separate section from the assignments that referenced them, so students bounced across multiple pages to open one reading. I moved required materials directly into the assignment detail view, with completion indicators and quick links to related materials in other courses.</p>
 
+          <!-- EDIT: Subsection heading - Adaptive dashboard -->
           <h3>A personalized, adaptive dashboard</h3>
+          <!-- EDIT: Adaptive dashboard paragraph -->
           <p>A static dashboard treated every student identically regardless of where they actually stood. I designed it to adapt to each student's progress and deadlines: catch-up resources for students falling behind, enrichment material for students ahead, and a "Your Week at a Glance" view that adjusts by day. Since 60% of access was on mobile, this had to work mobile-first — a stacked card layout, touch-friendly targets, and persistent bottom navigation, with desktop as the enhancement rather than the default. I also moved grade and progress indicators into a persistent, glanceable header so students didn't have to go looking for reassurance about where they stood.</p>
 
+          <!-- EDIT: Section heading - Information Architecture -->
           <h2>Information Architecture</h2>
 
           <figure class="case-image">
             <img src="/images/dashboard/sitemap.png" alt="Site map showing before and after information architecture">
           </figure>
 
+          <!-- EDIT: Information architecture paragraph -->
           <p>The original structure split Dashboard, Assignments, Materials, Grades, and Resources into five siloed sections nested 4-5 levels deep. I rebuilt it around action rather than category — Dashboard, Your Week, In Progress, Completed, and Course Materials — with grades and materials surfaced contextually inside each assignment instead of hidden in their own tabs, cutting navigation down to 2-3 levels.</p>
 
           <svg class="mini-diagram" viewBox="0 0 460 98" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information architecture before: Dashboard, Assignments, Materials, Grades, Resources, nested 4 to 5 levels deep. After: Dashboard, Your Week, In Progress, Completed, Course Materials, 2 to 3 levels deep.">
@@ -104,15 +121,19 @@
             <text x="398" y="84" text-anchor="middle" font-family="Poppins, sans-serif" font-size="8.5" fill="var(--color-ink)">Course Materials</text>
           </svg>
 
+          <!-- EDIT: Section heading - Testing & Iterations -->
           <h2>Testing &amp; Iterations</h2>
+          <!-- EDIT: Testing paragraph -->
           <p>I ran two rounds of moderated usability testing with 8 students. The first round surfaced three issues: an easy-to-miss "View All" link, unclear required-vs-optional materials, and performance indicators that read as accusatory — students with lower grades found the red color coding stressful rather than motivating. I softened the palette, added encouraging messaging regardless of performance, and emphasized trend over absolute grade; the second round validated the fixes across every core task.</p>
 
+          <!-- EDIT: Section heading - Outcomes & Impact -->
           <h2>Outcomes &amp; Impact</h2>
 
           <figure class="case-image">
             <img src="/images/dashboard/Design-Outcomes.png" alt="Design outcomes summary">
           </figure>
 
+          <!-- EDIT: Outcomes paragraph -->
           <p>Task completion for finding the next assignment went from 60% to 95%. Materials access rose from 35% to 68% of students, on-time submission from 75% to 88%, and mobile completion from 45% to 72%. Overall satisfaction moved from 3.2/5 to 4.5/5.</p>
 
           <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Task completion: 60% to 95%">
@@ -129,45 +150,56 @@
             <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">72%</text>
           </svg>
 
+          <!-- EDIT: Pull quote 1 - student feedback -->
           <p class="pull-quote">"I used to feel lost every time I logged in. Now I know exactly what to do."</p>
+          <!-- EDIT: Pull quote 2 - student feedback -->
           <p class="pull-quote">"I love that I can see I'm on track without clicking around forever."</p>
         </div>
 
         <div class="case-gallery case-gallery--three">
           <figure>
             <img src="/images/dashboard/01_student_dash.png" alt="">
+            <!-- EDIT: Gallery caption - student dashboard -->
             <figcaption>Student Dashboard</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/02_performance.png" alt="">
+            <!-- EDIT: Gallery caption - student performance -->
             <figcaption>Student Performance</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/03_materials.png" alt="">
+            <!-- EDIT: Gallery caption - course materials -->
             <figcaption>Course Materials</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/04_assign_detail.png" alt="">
+            <!-- EDIT: Gallery caption - reading assignment -->
             <figcaption>Reading Assignment</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/05_mobile_dash.png" alt="">
+            <!-- EDIT: Gallery caption - student dashboard mobile -->
             <figcaption>Student Dashboard // mobile</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/06_performance.png" alt="">
+            <!-- EDIT: Gallery caption - student performance mobile -->
             <figcaption>Student Performance // mobile</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/07_materials.png" alt="">
+            <!-- EDIT: Gallery caption - course materials mobile -->
             <figcaption>Course Materials // mobile</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/08_audio.png" alt="">
+            <!-- EDIT: Gallery caption - course audio files mobile -->
             <figcaption>Course Audio Files // mobile</figcaption>
           </figure>
           <figure>
             <img src="/images/dashboard/09_reading.png" alt="">
+            <!-- EDIT: Gallery caption - reading assignment mobile -->
             <figcaption>Reading Assignment // mobile</figcaption>
           </figure>
         </div>
@@ -176,7 +208,9 @@
 
     <section class="section">
       <div class="section__inner wrap case-cta">
+        <!-- EDIT: Closing CTA heading -->
         <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <!-- EDIT: Closing CTA button -->
         <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>

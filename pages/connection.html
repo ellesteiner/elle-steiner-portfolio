@@ -21,51 +21,68 @@
     <div class="case-hero scrim-banner">
       <img src="/images/connection/connect-hero.png" alt="">
       <div class="case-hero__content">
+        <!-- EDIT: Case title -->
         <h1 class="case-title">Connection Indicator Component</h1>
+        <!-- EDIT: Case subtitle -->
         <p class="case-subtitle">Kessel Run - US Air Force Software</p>
       </div>
     </div>
 
     <section class="section">
       <div class="section__inner wrap">
+        <!-- EDIT: Case meta (role/timeline/team/impact) -->
         <p class="case-meta">Role: Lead Designer &nbsp;//&nbsp; Timeline: 4 months &nbsp;//&nbsp; Team: 2 designers, 5 engineers &nbsp;//&nbsp; Impact: 7 applications</p>
 
         <div class="prose">
+          <!-- EDIT: Intro paragraph -->
           <p>I led design and implementation of a standardized connection indicator component across 7 Air Force applications, replacing inconsistent, app-specific indicators with one reusable pattern now adopted throughout the design system.</p>
 
+          <!-- EDIT: Subsection heading - Key Outcomes -->
           <h4>Key Outcomes:</h4>
+          <!-- EDIT: Key outcomes list -->
           <ul>
             <li>75% reduction in connection-related support tickets</li>
             <li>7 applications successfully integrated the component in 3 months</li>
             <li>User satisfaction improved 28% in post-deployment surveys</li>
           </ul>
 
+          <!-- EDIT: Section heading - The Problem -->
           <h2>The Problem</h2>
+          <!-- EDIT: The Problem paragraph 1 -->
           <p>Warfighters using our mission-critical software suite couldn't tell whether the data in front of them was current or stale — seven applications each displayed connection status differently, or not at all. As one put it, "I don't know if I'm seeing live data or if my connection dropped," and another: "I make mission-critical decisions on this data, I need to know it's current."</p>
+          <!-- EDIT: The Problem paragraph 2 -->
           <p>The confusion showed up in the numbers too: 20+ monthly support tickets across the 7 apps, each averaging 45 minutes to resolve. The technical picture was just as fragmented — apps had different connectivity requirements (real-time vs. periodic sync), some needed offline functionality with sync queues, and the 5 apps that already had some kind of indicator had each built it differently.</p>
 
           <div class="compare-grid">
             <figure class="case-image">
               <img src="/images/connection/Before.png" alt="Before: inconsistent connection indicators">
+              <!-- EDIT: Compare caption - before -->
               <figcaption>Before</figcaption>
             </figure>
             <figure class="case-image">
               <img src="/images/connection/After.png" alt="After: unified connection indicator component">
+              <!-- EDIT: Compare caption - after -->
               <figcaption>After</figcaption>
             </figure>
           </div>
 
+          <!-- EDIT: Section heading - My Approach -->
           <h2>My Approach</h2>
 
+          <!-- EDIT: Subsection heading - Phase 1 -->
           <h3>Phase 1: Research &amp; Discovery</h3>
+          <!-- EDIT: Phase 1 paragraph -->
           <p>I assembled a cross-functional working group — all 7 product teams, backend engineers, warfighters, and security — and ran interviews with 12 warfighters plus analysis of 50+ support tickets. The insight that shaped everything: users needed to understand what connection status meant for their specific workflow, not just binary connectivity.</p>
+          <!-- EDIT: Pull quote - key decision -->
           <p class="pull-quote">Key Decision: Framed the problem around context-specific needs (warfighter needs current targeting data, analyst needs latest intel updates) rather than generic connection indicators. This insight drove all subsequent design decisions.</p>
 
           <figure class="case-image">
             <img src="/images/connection/timeline.png" alt="Project timeline across four phases">
           </figure>
 
+          <!-- EDIT: Subsection heading - Phase 2 -->
           <h3>Phase 2: Collaborative Design</h3>
+          <!-- EDIT: Phase 2 paragraph -->
           <p>I partnered with the dev team from day one to map backend constraints, then tested three design directions with 8 warfighters. The winner — icon + color + text label — hit 94% accuracy versus 62% for icon-only, so I built it as a three-tier progressive-enhancement system (Basic, Enhanced, Advanced) letting every app integrate at whatever level its backend supported, rather than forcing a one-size-fits-all build.</p>
 
           <svg class="mini-diagram" viewBox="0 0 260 98" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before: 7 apps with inconsistent or missing connection indicators, no shared pattern. After: one shared component with a three-tier flow, Basic to Enhanced to Advanced.">
@@ -102,11 +119,16 @@
             <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">94%</text>
           </svg>
 
+          <!-- EDIT: Subsection heading - Phase 3 -->
           <h3>Phase 3: Development Partnership</h3>
+          <!-- EDIT: Phase 3 paragraph -->
           <p>I documented the component's API, visual specs, interaction behavior, and edge cases, then held daily office hours during the 3-month rollout to support all 7 teams. When one team's backend couldn't distinguish "poor connection" from "timeout," I combined those states with clearer messaging rather than forcing a technical fix — between the documentation and real-time support, teams integrated the component in an average of 2 days versus the previous 2-week timeline.</p>
 
+          <!-- EDIT: Section heading - Design Solution -->
           <h2>Design Solution</h2>
+          <!-- EDIT: Subsection heading - Component Architecture -->
           <h3>Component Architecture</h3>
+          <!-- EDIT: Component architecture paragraph -->
           <p>Three connection states, always differentiated by color, icon, and text label together, never color alone: Connected (green) tells users their data is live; Partially Connected (yellow, with a subtle reconnecting animation) tells them the app is retrying and showing cached data; and Critical Connection (red, with a last-synced timestamp) tells them they're fully offline.</p>
 
           <svg class="mini-diagram" viewBox="0 0 260 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three connection states: Connected, data is live. Partially Connected, retrying with cached data. Critical Connection, fully offline.">
@@ -123,7 +145,9 @@
             <text x="20" y="79" font-family="Poppins, sans-serif" font-size="8" fill="var(--color-annotation)">Fully offline</text>
           </svg>
 
+          <!-- EDIT: Subsection heading - Visual Design Decisions -->
           <h3>Visual Design Decisions</h3>
+          <!-- EDIT: Visual design paragraph -->
           <p>I placed the indicator in the application header, top-right — testing showed 95% discoverability there versus 62% for footer placement. Color mapped to familiar mental models (green/yellow/red) but never carried meaning alone: every state paired a WCAG AA-compliant text label, verified with colorblind simulation, with a subtle pulse animation that drew attention only when the state actually changed.</p>
 
           <svg class="mini-chart" viewBox="0 0 170 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Discoverability: 62% for footer placement to 95% for header placement">
@@ -133,8 +157,11 @@
             <text x="150" y="9" text-anchor="end" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">95%</text>
           </svg>
 
+          <!-- EDIT: Section heading - Collaboration & Leadership -->
           <h2>Collaboration &amp; Leadership</h2>
+          <!-- EDIT: Collaboration paragraph 1 -->
           <p>I led collaboration across all 7 product teams and mentored a junior designer on component variants for the next phase. Not every team prioritized integration at first, so I showed them their own support-ticket data, demoed the improved experience, and offered hands-on implementation support — that secured commitment from all 7 teams within 2 weeks.</p>
+          <!-- EDIT: Collaboration paragraph 2 -->
           <p>Backend teams each had different connectivity architectures, so I ran a technical design session to find common ground and built a flexible component API that adapted to all 7 without breaking consistency. Once it was in the centralized Figma library with full documentation, integration time for new apps dropped from 2 weeks to 2 days, and the component became the template for every status indicator that followed.</p>
 
           <figure class="case-image">
@@ -146,7 +173,9 @@
 
     <section class="section">
       <div class="section__inner wrap case-cta">
+        <!-- EDIT: Closing CTA heading -->
         <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <!-- EDIT: Closing CTA button -->
         <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>

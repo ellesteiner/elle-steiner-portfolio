@@ -21,7 +21,9 @@
     <div class="case-hero scrim-banner case-hero--dark">
       <img src="/images/dnc/DNC-hero.png" alt="">
       <div class="case-hero__content">
+        <!-- EDIT: Case title -->
         <h1 class="case-title">Campaign Data Dashboard</h1>
+        <!-- EDIT: Case subtitle -->
         <p class="case-subtitle">Exploring AI-Assisted Complex Data Visualization</p>
       </div>
     </div>
@@ -29,11 +31,16 @@
     <section class="section">
       <div class="section__inner wrap">
         <div class="prose">
+          <!-- EDIT: Section heading - The Challenge -->
           <h2>The Challenge</h2>
+          <!-- EDIT: Challenge paragraph -->
           <p>Can AI tools accelerate dashboard design for complex, multi-stakeholder products? I tested this by designing a campaign analytics dashboard — voter data, volunteer metrics, ballot tracking, and performance insights for field organizers, data directors, volunteer coordinators, and state staff — using AI for research simulation and information architecture, then applying UX expertise to refine the outputs into a credible design. A traditional approach would take 8-12 weeks of stakeholder interviews, card sorting, and iterative prototyping; I compressed it to 2 weeks and validated the approach against real tools.</p>
+          <!-- EDIT: Project type / duration / focus line -->
           <p><strong>Project Type:</strong> Design experiment &nbsp;|&nbsp; <strong>Duration:</strong> 3 weeks &nbsp;|&nbsp; <strong>Focus:</strong> AI-assisted workflow</p>
 
+          <!-- EDIT: Section heading - AI-Assisted Process -->
           <h2>AI-Assisted Process</h2>
+          <!-- EDIT: AI-assisted process paragraph -->
           <p>I used AI across three early steps: Claude generated 4 realistic campaign personas in 90 minutes instead of 8 hours manually; simulated card sorting produced 6 primary IA categories (Today's Priorities, Voter Universe, Team Performance, Ballot Tracking, Trends, Reports) that aligned well with existing tool patterns; and AI-recommended chart types gave a reasonable starting point that still needed human refinement for accessibility.</p>
 
           <figure class="case-image">
@@ -44,32 +51,40 @@
             <table class="data-table">
               <thead>
                 <tr>
+                  <!-- EDIT: Table header - Data Type -->
                   <th>Data Type</th>
+                  <!-- EDIT: Table header - Visualization -->
                   <th>Visualization</th>
+                  <!-- EDIT: Table header - Rationale -->
                   <th>Rationale</th>
                 </tr>
               </thead>
               <tbody>
+                <!-- EDIT: Table row - Voter targeting priorities -->
                 <tr>
                   <td>Voter targeting priorities</td>
                   <td>Sortable table + map</td>
                   <td>Users need to export lists AND see geographic distribution</td>
                 </tr>
+                <!-- EDIT: Table row - Ballot return rates -->
                 <tr>
                   <td>Ballot return rates</td>
                   <td>Progress bars + trend lines</td>
                   <td>Shows both status &amp; momentum</td>
                 </tr>
+                <!-- EDIT: Table row - Volunteer activity -->
                 <tr>
                   <td>Volunteer activity</td>
                   <td>Heat map by time/location</td>
                   <td>Reveals coverage gaps &amp; peak times</td>
                 </tr>
+                <!-- EDIT: Table row - Turnout modeling -->
                 <tr>
                   <td>Turnout modeling</td>
                   <td>Gauge + confidence interval</td>
                   <td>Shows prediction with uncertainty</td>
                 </tr>
+                <!-- EDIT: Table row - Contact attempts -->
                 <tr>
                   <td>Contact attempts</td>
                   <td>Stacked bar by result</td>
@@ -83,22 +98,31 @@
             <img src="/images/dnc/AI-flow-test.png" alt="AI-simulated flow testing">
           </figure>
 
+          <!-- EDIT: Section heading - Key Design Decisions -->
           <h2>Key Design Decisions</h2>
+          <!-- EDIT: Design decision - progressive disclosure -->
           <p><strong>Progressive disclosure.</strong> The core structural decision: a three-tier hierarchy where critical metrics stay always visible, context sits one click away, and deep analysis expands on demand — so "47% ballot return" can expand to "↑3% vs. yesterday, ↓2% vs. target" and then a full trend chart, without overwhelming the default view.</p>
 
+          <!-- EDIT: Design decision - role-based defaults -->
           <p><strong>Role-based smart defaults.</strong> Since field organizers, data directors, volunteer coordinators, and state staff all need different entry points, each role lands on a personalized view — contact priorities, trends, team performance, or a multi-campaign overview — cutting setup friction while still letting anyone customize further.</p>
 
+          <!-- EDIT: Design decision - algorithm transparency -->
           <p><strong>Algorithm transparency.</strong> Because users distrust "black box" priority scores, every score comes with a methodology tooltip breaking down the weighting (turnout likelihood 40%, persuadability 30%, contact history 30%), a link to full documentation, and a manual override — transparency that matters for decisions this high-stakes.</p>
 
+          <!-- EDIT: Section heading - What AI Did Well vs Human Expertise -->
           <h2>What AI Did Well VS What Needed Human Expertise</h2>
+          <!-- EDIT: Subsection heading - AI Strengths -->
           <h3>AI Strengths</h3>
+          <!-- EDIT: AI strengths list -->
           <ul>
             <li>Rapid persona generation - 4 detailed personas in minutes</li>
             <li>Pain point brainstorming - 15+ relevant challenges quickly</li>
             <li>Visualization recommendations - Appropriate chart types for data</li>
             <li>Pattern recognition - Identified common dashboard structures</li>
           </ul>
+          <!-- EDIT: Subsection heading - Human Expertise Required -->
           <h3>Human Expertise Required</h3>
+          <!-- EDIT: Human expertise list -->
           <ul>
             <li>Strategic prioritization - Which users/features to focus on first</li>
             <li>Interaction design - Transitions, loading states, error handling</li>
@@ -106,16 +130,22 @@
             <li>Visual polish - Typography, spacing, component consistency</li>
           </ul>
 
+          <!-- EDIT: Section heading - Outcomes -->
           <h2>Outcomes</h2>
+          <!-- EDIT: Outcomes paragraph -->
           <p>With 60% of field staff checking data on mobile while canvassing, every view also had to work on a 375px screen without losing the prioritization logic — that constraint shaped the deliverables below.</p>
+          <!-- EDIT: Deliverables label -->
           <p><strong>Deliverables:</strong></p>
+          <!-- EDIT: Deliverables list -->
           <ul>
             <li>Dashboard concept with 20+ components</li>
             <li>Information architecture for 6 data categories</li>
             <li>Mobile-responsive layouts</li>
             <li>Visualization library with 8 chart types</li>
           </ul>
+          <!-- EDIT: Time efficiency label -->
           <p><strong>Time Efficiency:</strong></p>
+          <!-- EDIT: Time efficiency list -->
           <ul>
             <li>Research: 90 minutes (vs. 8 hours traditional)</li>
             <li>Information architecture: 90 minutes (vs. 4 hours)</li>
@@ -138,8 +168,10 @@
             <rect x="0" y="63" width="28" height="9" fill="var(--color-accent)"/>
             <text x="62" y="71" font-family="Poppins, sans-serif" font-size="9" fill="var(--color-ink)">3h &#8594; 90m</text>
           </svg>
+          <!-- EDIT: Limitations note -->
           <p><em>Limitations: This is an exploratory concept using AI-simulated research. It has NOT been validated with real campaign staff and would require extensive user testing before implementation.</em></p>
 
+          <!-- EDIT: Section heading - Dashboard Visual Design -->
           <h2>Dashboard Visual Design</h2>
           <figure class="case-image">
             <img src="/images/dnc/DNC-dashboard.png" alt="Campaign dashboard visual design">
@@ -154,7 +186,9 @@
 
     <section class="section">
       <div class="section__inner wrap case-cta">
+        <!-- EDIT: Closing CTA heading -->
         <h2 class="section__heading">Interested in how I could do this for your team?</h2>
+        <!-- EDIT: Closing CTA button -->
         <a class="btn" href="/pages/contact.html">Let's talk</a>
       </div>
     </section>
