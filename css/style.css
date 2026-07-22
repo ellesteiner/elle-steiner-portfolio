@@ -895,6 +895,22 @@ button {
   margin-inline: auto;
 }
 
+.work-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.3rem, 1.7rem + 2.8vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+  max-width: 22ch;
+}
+
+.work-hero__intro {
+  font-size: 1.05rem;
+  max-width: 60ch;
+  color: var(--color-annotation);
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
