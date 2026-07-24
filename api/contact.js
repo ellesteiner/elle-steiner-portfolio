@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { name, email, message, company } = req.body || {};
+  const { name, email, message, companyName, lookingFor, company } = req.body || {};
 
   // Honeypot: bots fill hidden fields. Pretend success without sending.
   if (company) {
@@ -14,6 +14,8 @@ export default async function handler(req, res) {
   const trimmedName = typeof name === "string" ? name.trim() : "";
   const trimmedEmail = typeof email === "string" ? email.trim() : "";
   const trimmedMessage = typeof message === "string" ? message.trim() : "";
+  const trimmedCompanyName = typeof companyName === "string" ? companyName.trim() : "";
+  const trimmedLookingFor = typeof lookingFor === "string" ? lookingFor.trim() : "";
 
   if (!trimmedName || !trimmedEmail || !trimmedMessage) {
     return res.status(400).json({ error: "Name, email, and message are required." });
@@ -45,7 +47,7 @@ export default async function handler(req, res) {
         to: ["ellesteiner@gmail.com"],
         reply_to: trimmedEmail,
         subject: `New contact form submission from ${trimmedName}`,
-        text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\n\nMessage:\n${trimmedMessage}`,
+        text: `Name: ${trimmedName}\nEmail: ${trimmedEmail}\nCompany: ${trimmedCompanyName}\nLooking for: ${trimmedLookingFor}\n\nMessage:\n${trimmedMessage}`,
       }),
     });
 

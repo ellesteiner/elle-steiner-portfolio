@@ -1009,38 +1009,71 @@ button {
   color: var(--color-text);
 }
 
-.contact-layout {
+.contact-hero__subhead {
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin-top: 1.25rem;
+  color: var(--color-annotation);
+}
+
+.contact-intent {
+  font-size: 0.9rem;
+  max-width: 60ch;
+  margin-top: 1rem;
+  color: var(--color-annotation);
+}
+
+.contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
-}
-
-.contact-layout__image img {
-  width: 100%;
-  border-radius: 4px;
-  height: clamp(280px, 30vw, 420px);
-  object-fit: cover;
-}
-
-.contact-layout__links {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h3);
-}
-
-.contact-layout__links a {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.contact-layout__links a:hover {
-  border-bottom: 1px solid currentColor;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
 }
 
 @media (max-width: 800px) {
-  .contact-layout {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-sidebar__label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-annotation);
+  margin-bottom: 0.75rem;
+}
+
+.contact-sidebar__links {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+}
+
+.contact-sidebar__links a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-sidebar__links a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.contact-sidebar__proof {
+  background: var(--color-ink);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.contact-sidebar__proof .testimonial__quote {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
 }
 
 /* ---------------------------------------------
@@ -1049,6 +1082,12 @@ button {
 .contact-form {
   max-width: 480px;
   margin-top: 1rem;
+}
+
+.contact-form__note {
+  font-size: 0.85rem;
+  color: var(--color-annotation);
+  margin-top: 0.75rem;
 }
 
 .contact-form__field {
@@ -1063,7 +1102,8 @@ button {
 }
 
 .contact-form__field input,
-.contact-form__field textarea {
+.contact-form__field textarea,
+.contact-form__field select {
   width: 100%;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -1075,7 +1115,8 @@ button {
 }
 
 .contact-form__field input:focus,
-.contact-form__field textarea:focus {
+.contact-form__field textarea:focus,
+.contact-form__field select:focus {
   outline: none;
   border-color: var(--color-accent);
 }

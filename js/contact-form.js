@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
+    const companyName = form.companyName.value.trim();
+    const lookingFor = form.lookingFor.value.trim();
     const company = form.company.value;
 
     statusEl.textContent = "";
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, company }),
+        body: JSON.stringify({ name, email, message, companyName, lookingFor, company }),
       });
 
       const data = await res.json().catch(() => ({}));
