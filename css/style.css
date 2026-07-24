@@ -1207,3 +1207,7 @@ button {
     gap: 2rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
